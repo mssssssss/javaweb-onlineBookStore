@@ -1,14 +1,15 @@
+<%--管理员界面的主界面（右部），所有查询的信息都在此显示，默认情况是功能的一些基本介绍--%>
 <%@ page language="java" contentType="text/html; charset=gbk"%>
 <html>
 <head>
 <style>
-<!--
-.wr{font-size: 12pt; line-height: 22px}
-.wr1 {	FONT-SIZE: 12px; LINE-HEIGHT: 200%}
+/*<!--*/
+/*.wr{font-size: 12pt; line-height: 22px}*/
+/*.wr1 {	FONT-SIZE: 12px; LINE-HEIGHT: 200%}*/
 .wr2 {	FONT-SIZE: 14px; LINE-HEIGHT: 200%}
-.wr3 {	FONT-SIZE: 12px}
-.wr4 {	FONT-SIZE: 12px; LINE-HEIGHT: 150%}
-// -->
+/*.wr3 {	FONT-SIZE: 12px}*/
+/*.wr4 {	FONT-SIZE: 12px; LINE-HEIGHT: 150%}*/
+/*// -->*/
 </style>
 <title>网上图书商城后台管理系统</title>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
@@ -39,7 +40,10 @@
 		          邮件列表系统：SiteEIP/SiteOA的邮电系统<br>
 		          访问分析：访问分析</p>
       </blockquote>
-      <p><b>系统设置</b>：系统设置</p>
+      <p><b>系统设置</b></p>
+      <blockquote>
+        <p>退出系统：退出本系统，可使用别的用户名和密码组合（管理类别），由此进入相对应的功能管理模块</p>
+      </blockquote>
     </td>
   </tr>
 </table>

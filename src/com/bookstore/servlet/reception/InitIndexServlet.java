@@ -23,7 +23,7 @@ import java.util.Map;
 public class InitIndexServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		/**
@@ -59,7 +59,7 @@ public class InitIndexServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		rd.forward(request, response);
 	}
-
+	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		this.doGet(request, response);

@@ -1,13 +1,16 @@
+<%--用户登陆系统的界面--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">--%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
 <title>易购网 － 网站登录</title>
 <link href="css/front/coupon_register.css" rel="stylesheet" type="text/css" />
 <link href="css/front/common.css" rel="stylesheet" type="text/css" />
 <link href="css/front/css.css" rel="stylesheet" type="text/css" />
+    <%--<link href="background/css/bootstrap.css" rel="stylesheet" type="text/css" />--%>
 <script language="javascript" src="js/util.js"></script>
 <script language="javascript" type="text/javascript">
 	function trim(str){
@@ -141,12 +144,12 @@
                     </tr>
                     <tr>
                       <td height="55" colspan="4" align="center">
-                      <input type="submit" name="Submit" value="登 录" class="button_26" tabindex="5" onclick="check(form)" /></td>
+                      <input style="background-color: #1A7CBC;border-radius:4px; width: 70px; height:30px; color: white;" type="submit" name="Submit" value="登 录"  tabindex="5" onclick="check(form)" /></td>
                     </tr>
-                    <tr>
-                      <td height="25" colspan="4" align="center">
-                      <a href="#" class="color_28">已注册会员手机验证可免费领取优惠券，GO!</a></td>
-                    </tr>
+                    <%--<tr>--%>
+                      <%--<td height="25" colspan="4" align="center">--%>
+                      <%--<a href="#" class="color_28">已注册会员手机验证可免费领取优惠券，GO!</a></td>--%>
+                    <%--</tr>--%>
                   </table>
 				</div>
 				<div class="n_dl_c_l_c"></div>
@@ -176,8 +179,8 @@
                       <td height="40" class="color_58">易购会员独享优惠活动!</td>
                     </tr>
                     <tr>
-                      <td height="33" colspan="4" align="center">
-                      <a href="#" class="color_28">在易购您可以畅读全场，GO!</a></td>
+                      <td height="33" colspan="4" align="center" style="color: red;">
+                      在易购您可以畅读全场!</td>
                     </tr>
                   </table>
 				</div>
@@ -197,7 +200,7 @@
 			</tr>
 			<tr>
 			  <td width="250"></td>
-			  <td width="389" align="center"><span style="color:#666666">Copyright &copy; 2004-2010 by   www.egou.com all rights reserved<br />
+			  <td width="389" align="center"><span style="color:#666666">Copyright &copy; 2009-2019 by   www.egou.com all rights reserved<br />
 				<a href="http://www.emar.com.cn" target="_blank" class="color_2">亿玛在线</a> 旗下网站<a href="http://www.miibeian.gov.cn/" target="_blank" class="color_2">京ICP证080025号</a> </span></td>
 			 	<td width="309" height="60" align="left" valign="middle"></td>
 			</tr>

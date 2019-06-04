@@ -27,7 +27,7 @@ public class ShowNewsServlet extends HttpServlet {
 		INewsDAO newsDAO = new NewsDAOImpl();
 		News news = newsDAO.findById(newId);
 		request.setAttribute("news", news);
-		List<News> newsList = newsDAO.findTopNine(10);
+		List<News> newsList = newsDAO.findTopNine(22);
 		request.setAttribute("newsList", newsList);
 		
 		Map<BookType, List<BookType>> bookTypes = new Hashtable<BookType, List<BookType>>();

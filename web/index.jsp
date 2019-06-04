@@ -18,6 +18,10 @@
 <link rel="stylesheet" href="style/public.css" type="text/css" />
 <link rel="stylesheet" href="style/index.css" type="text/css" />
 <script src="js/banner.js" type="text/javascript"></script>
+    <style type="text/css">
+
+        a:hover{color: red;}
+    </style>
 </head>
 <body>
 <%
@@ -31,11 +35,11 @@
 <div class="top1">
 	<div class="top1_1">
    	欢迎您登录网上商城！
-   	用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> 
-   	密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> 
-   	<a href="#">忘记密码?</a> 
-   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">登录</a>
-   	<a href="${pageContext.request.contextPath}/background/index.jsp">注册</a>
+   	<%--用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> --%>
+   	<%--密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> --%>
+   	<%--<a href="#">忘记密码?</a> --%>
+   	<a  href="${pageContext.request.contextPath}/qtLogin.jsp">用户登录</a>
+   	<a  href="${pageContext.request.contextPath}/background/index.jsp">管理员登陆</a>
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">
@@ -158,9 +162,9 @@
                     	<%} %>
    				   </ul>
             </div>
-            <div class="middle_right1Rimg">
-            	<img src="images/middle_right1Rimg.jpg" />
-            </div>           
+            <%--<div class="middle_right1Rimg">--%>
+            	<%--<img src="images/middle_right1Rimg.jpg" />--%>
+            <%--</div>--%>
         </div>
         <div class="middle_right2">
             	<div class="middle_right2Rtitle">最新商品 <i>New book</i></div>

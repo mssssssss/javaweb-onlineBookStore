@@ -29,11 +29,11 @@
 <div class="top1">
 	<div class="top1_1">
    	欢迎您登录网上商城！
-   	用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> 
-   	密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> 
-   	<a href="#">忘记密码?</a> 
-   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">登录</a>
-   	<a href="${pageContext.request.contextPath}/background/index.jsp">注册</a>
+   	<%--用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> --%>
+   	<%--密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> --%>
+   	<%--<a href="#">忘记密码?</a> --%>
+   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">用户登录</a>
+   	<a href="${pageContext.request.contextPath}/background/index.jsp">管理员登陆</a>
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">

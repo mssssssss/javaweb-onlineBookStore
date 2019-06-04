@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/BookDiscuss.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/BookDiscuss.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/BookDiscuss.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/BookInfo.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/BookInfo.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/BookType.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/BookType.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/CustomerDetailInfo.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/CustomerDetailInfo.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/CustomerInfo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/CustomerInfo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/Employee.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/Employee.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/Favorite.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/Favorite.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/News.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/News.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/OrderDetail.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/OrderDetail.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/OrderMain.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/OrderMain.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/SysAdmin.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/SysAdmin.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/common/Config.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/common/DateConvert.java" charset="GBK" />
@@ -44,18 +32,6 @@
     <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/CustomerInfoDAOImpl.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/EmployeeDAOImpl.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/FavoriteDAOImpl.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/IBookDiscussDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/IBookDiscussDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/IBookInfoDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/IBookTypeDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/ICustomerDetailInfoDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/ICustomerInfoDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/IEmployeeDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/IFavoriteDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/INewsDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/IOrderDetailDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/IOrderMainDAO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/ISysAdminDAO.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/NewsDAOImpl.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/OrderDetailDAOImpl.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/dao/impl/OrderMainDAOImpl.java" charset="GBK" />
@@ -124,11 +100,13 @@
     <file url="file://$PROJECT_DIR$/src/com/bookstore/servlet/sysAdmin/SaveAdminServlet.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/servlet/sysAdmin/UpdateAdminServlet.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/background" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/background/CheckCodeServlet.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/bookInfo.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/bookInfoList.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/gouwuche.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/images" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/images/01.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/imgsd" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/imgsx" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/index.jsp" charset="GBK" />
@@ -138,5 +116,6 @@
     <file url="file://$PROJECT_DIR$/web/qtLogin.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/showNews.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/style" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta name="viewport" content="width=1024" />
@@ -11,17 +12,21 @@
 <link rel="stylesheet" type="text/css" href="style/style.css" />
 <link rel="stylesheet" type="text/css" href="style/orderInfo.css" />
 <link rel="stylesheet" href="style/public.css" type="text/css" />
+	<style type="text/css">
+		a:hover{color: red;}
+	</style>
 </head>
 
 <body>
 <div class="top1">
 	<div class="top1_1">
    	欢迎您登录网上商城！
-   	用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> 
-   	密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> 
-   	<a href="#">忘记密码?</a> 
-   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">登录</a>
-   	<a href="${pageContext.request.contextPath}/background/index.jsp">注册</a>
+   	<%--用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> --%>
+   	<%--密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> --%>
+   	<%--<a href="#">忘记密码?</a> --%>
+
+   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">用户登录</a>
+   	<a href="${pageContext.request.contextPath}/background/index.jsp">管理员登陆</a>
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">
