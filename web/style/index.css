@@ -21,7 +21,7 @@
 			.middle_right1L{width:579px; height:auto; float:left;}
 			.middle_right1R	{width:187px; height:auto; float:right; border:1px solid #cbcbcb;}
 				.middle_right1Rtitle{width:189px; height:27px; float:left; background:url(../images/news.gif) no-repeat;}
-				.middle_right1Rcon{width:666px; height:650px; float:left;}
+				.middle_right1Rcon{width:666px; height:auto; float:left;}
 					.middle_right1Rcon li{height:22px; line-height:22px; padding:0 0 0 18px; border-bottom: 1px dashed #ccc; background:url(../images/i1.gif) no-repeat 5px 7px;}
 						.middle_right1Rcon li a{height:23px; line-height:23px; color:#410D12;}
 			.middle_right1Rimg{width:189px; height:56px; float:right; margin-top:5px;}			

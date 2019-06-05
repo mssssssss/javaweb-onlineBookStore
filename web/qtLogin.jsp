@@ -109,7 +109,7 @@
                       <td height="30" colspan="4"><span class="color_1" id="errorMsg"></span></td>
                     </tr>
                     <tr>
-                      <td width="48" height="35">用户名：</td>
+                      <td width="55" height="35">用户名：</td>
                       <td height="35" colspan="3">
                       <input type="text" name="username" id="username"  onblur="checkUserName()" tabindex="1" class="input_35" />
                       <script language="javascript" type="text/javascript">

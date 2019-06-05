@@ -1,3 +1,4 @@
+<%--书城主页--%>
 <%@ page language="java" contentType="text/html; charset=gbk"%>
 <%@page import="java.util.List"%>
 <%@page import="com.bookstore.bean.BookInfo"%>
@@ -19,8 +20,7 @@
 <link rel="stylesheet" href="style/index.css" type="text/css" />
 <script src="js/banner.js" type="text/javascript"></script>
     <style type="text/css">
-
-        a:hover{color: red;}
+        a:hover{ color: red;}
     </style>
 </head>
 <body>
@@ -53,19 +53,23 @@
         	<ul class="other">
             	<li>
 	            	<a href="<%=request.getContextPath() %>/gouwuche.jsp">
-	            	<img src="images/car.gif"/><br />购物车</a>
+                        <%--<a href="#">--%>
+	            	<img src="images/car.jpg"/><br />购物车</a>
             	</li>
-				<li><a href="#"><img src="images/car.gif"/><br />订单查询  </a></li>
-				<li><a href="#"><img src="images/car.gif"/><br />我的空间</a></li>
-				<li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17"><img src="images/car.gif"/><br />购书服务 </a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />订单查询</a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />我的积分</a></li>
+				<li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />关联网站</a></li>
             </ul>
             <ul class="menu">
-            	<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">畅销</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">文学</a></li>
-                <li><a href="http://www.dangdang.com/">书系</a></li>
-                <li><a href="http://www.dangdang.com/">文化</a></li>
-                <li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17">经营</a></li>
+            	<%--<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>--%>
+                <%--<li><a href="<%=request.getContextPath() %>/InitIndexServlet">小说</a></li>--%>
+                <%--<li><a href="<%=request.getContextPath() %>/InitIndexServlet">文艺</a></li>--%>
+                    <li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
+                    <li><a href="#">小说</a></li>
+                    <li><a href="#">文艺</a></li>
+                <li><a href="#">传记</a></li>
+                <li><a href="#">漫画</a></li>
+                <li><a href="about.jsp">关于</a></li>
             </ul>
         </div>
 	</div>
@@ -91,10 +95,10 @@
 			<%} %>
         </div>
          <div class="middle_left2">
-        	<img src="images/01.jpg"/>
+        	<img src="images/02.jpg"/>
         </div>
         <div class="middle_left2">
-            <img src="images/05.jpg"/>
+            <img src="images/01.jpg"/>
         </div>
         <div class="middle_left2">
         	<img src="images/1.jpg"/>
@@ -113,6 +117,7 @@
 <TABLE id="idSlider2" border="0" cellspacing="0" cellpadding="0">
   <TBODY>
   <TR>
+      <%--轮播图片--%>
     <TD class="td_f"><A href="#"><IMG src="images/01.jpg"/></A></TD>
 	<TD class="td_f"><A href="#"><IMG src="images/02.jpg"/></A></TD>
 	<TD class="td_f"><A href="#"><IMG src="images/03.jpg"/></A></TD>
@@ -150,6 +155,7 @@
 	st.Run();
 </SCRIPT>
             </div>
+        <%--资讯新闻的展示--%>
          	<div class="middle_right1R">
             	<div class="middle_right1Rtitle"> </div>
                 <div class="middle_right1Rcon">
@@ -158,7 +164,7 @@
                 		News news = new News();
                 		news = newsList.get(i);
                 		%>
-                    	<li><a href="<%=request.getContextPath() %>/ShowNewsServlet?id=<%=news.getNewsId() %>"><%=news.getNewTitle() %></a></li>
+                    	<li><a style="font-family:隶书" href="<%=request.getContextPath() %>/ShowNewsServlet?id=<%=news.getNewsId() %>"><%=news.getNewTitle() %></a></li>
                     	<%} %>
    				   </ul>
             </div>
@@ -232,51 +238,51 @@
 <!-- footer -->
 <div class="footer">
 	<ul class="lbox">
-    	<li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17">顾客必读</a></li>
-        <li><a href="#">订单的几种状态</a></li>
-        <li><a href="#">会员等级折扣</a></li>
-        <li><a href="#">积分奖励计划</a></li>
-        <li><a href="#">顾客必读</a></li>
-        <li><a href="#">商品退货保证</a></li>
+    	<li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">购物指南</li>
+        <li><a href="#">购物流程</a></li>
+        <li><a href="#">发票制度</a></li>
+        <li><a href="#">服务协议</a></li>
+        <li><a href="#">会员优惠</a></li>
+        <li><a href="#">会员积分</a></li>
     </ul>
     <ul class="lbox">
-    	<li><a href="#">顾客必读</a></li>
-        <li><a href="#">订单的几种状态</a></li>
-        <li><a href="#">会员等级折扣</a></li>
-        <li><a href="#">积分奖励计划</a></li>
-        <li><a href="#">顾客必读</a></li>
-        <li><a href="#">商品退货保证</a></li>
+        <li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">支付方式</li>
+        <li><a href="#">货到付款</a></li>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">礼品卡支付</a></li>
+        <li><a href="#">银行转账</a></li>
+        <li><a href="#">朋友代付</a></li>
     </ul>
    	<ul class="lbox">
-    	<li><a href="#">顾客必读</a></li>
-        <li><a href="#">订单的几种状态</a></li>
-        <li><a href="#">会员等级折扣</a></li>
-        <li><a href="#">积分奖励计划</a></li>
-        <li><a href="#">顾客必读</a></li>
-        <li><a href="#">商品退货保证</a></li>
+        <li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">订单服务</li>
+        <li><a href="#">配送服务查询</a></li>
+        <li><a href="#">订单状态说明</a></li>
+        <li><a href="#">订单异常说明</a></li>
+        <li><a href="#">自助修改订单</a></li>
+        <li><a href="#">自助取消订单</a></li>
     </ul>
    	<ul class="lbox nolbox">
-    	<li><a href="#">顾客必读</a></li>
-        <li><a href="#">订单的几种状态</a></li>
-        <li><a href="#">会员等级折扣</a></li>
-        <li><a href="#">积分奖励计划</a></li>
-        <li><a href="#">顾客必读</a></li>
-        <li><a href="#">商品退货保证</a></li>
+        <li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">配送方式</li>
+        <li><a href="#">当日递</a></li>
+        <li><a href="#">次日达</a></li>
+        <li><a href="#">订单自提</a></li>
+        <li><a href="#">验货与签收</a></li>
+        <li><a href="#">朋友代签</a></li>
     </ul>
 </div>
 <!-- footer1 -->
 <div class="footer1">
-	<img src="images/footer1img.jpg" />
-	<img src="images/footer2img.jpg" /> 
-	<img src="images/footer3img.jpg" />
-	<img src="images/footer4img.jpg" />
-  	<img src="images/footer5img.jpg" />
-	<img src="images/footer6img.jpg" />           
+	<img width="152px" src="images/footer1img.jpg" />
+	<img width="152px" src="images/footer2img.jpg" />
+	<img width="152px" src="images/footer3img.jpg" />
+	<img width="152px" src="images/footer4img.jpg" />
+  	<img width="152px" src="images/footer5img.jpg" />
+	<img width="152px" src="images/footer6img.jpg" />
 </div>
 <!-- footer2 -->
 <div class="footer2">
-版权所有：www.xubangyiliao.com<br />
-电话:029-62966051 87811277 传真：029-62966051 陕ICP备1109231号
+    Copyright (C) 云起点 2009-2019, All Rights Reserved<br />
+    互联网违法和不良信息举报电话：4001066666-5 邮箱：service@cs.yunqidian.com
 </div>
 </body>
 </html>

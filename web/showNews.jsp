@@ -1,3 +1,4 @@
+<%--新闻的具体显示信息--%>
 <%@ page language="java" contentType="text/html; charset=gbk"%>
 <%@page import="com.bookstore.bean.BookInfo"%>
 <%@page import="java.util.List"%>
@@ -42,18 +43,18 @@
         </div>
 		<div class="top1_2_r">
         	<ul class="other">
-            	<li><a href="<%=request.getContextPath() %>/gouwuche.jsp"><img src="images/car.gif"/><br />购物车</a></li>
-				<li><a href="#"><img src="images/car.gif"/><br />订单查询  </a></li>
-				<li><a href="#"><img src="images/car.gif"/><br />我的空间</a></li>
-				<li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17"><img src="images/car.gif"/><br />购书服务 </a></li>
-            </ul>
+            	<li><a href="<%=request.getContextPath() %>/gouwuche.jsp"><img src="images/car.jpg"/><br />购物车</a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />订单查询  </a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />我的积分</a></li>
+				<li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />关联网站</a></li>
+			</ul>
             <ul class="menu">
-            	<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">畅销</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">文学</a></li>
-                <li><a href="http://www.dangdang.com/">书系</a></li>
-                <li><a href="http://www.dangdang.com/">文化</a></li>
-                <li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17">经营</a></li>
+				<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
+				<li><a href="#">小说</a></li>
+				<li><a href="#">文艺</a></li>
+				<li><a href="#">传记</a></li>
+				<li><a href="#">漫画</a></li>
+				<li><a href="about.jsp">关于</a></li>
             </ul>
         </div>
 	</div>
@@ -90,21 +91,21 @@
         		
         	</div>
         </div> 
-        <div class="middle9">
-        	<div class="middle9tit">用户评论</div>
-            <div class="middle_right9con">
-            	<div>用户名：匿名用户</div>
-                <div>E-mail:<input type="text" name="text" size="25" /></div>
-            	<div>评论等级：<input name="" type="radio" value="" /><img src="images/pl1.gif"/> 
-            	<input name="" type="radio" value="" /><img src="images/pl1.gif"/> 
-            	<input name="" type="radio" value="" /><img src="images/pl1.gif"/> 
-            	<input name="" type="radio" value="" /><img src="images/pl1.gif"/> 
-            	<input name="" type="radio" value="" /><img src="images/pl1.gif"/></div>
-            	<div>评论内容：<textarea name="" cols="" rows=""></textarea></div>
-                <div>验证码：<input type="text"  size="15" /><img src="images/yz.gif"/></div>
-                <div><input type="button"  class="btn4" value=" " /></div>
-            </div>
-            </div>        
+        <%--<div class="middle9">--%>
+        	<%--<div class="middle9tit">用户评论</div>--%>
+            <%--<div class="middle_right9con">--%>
+            	<%--<div>用户名：匿名用户</div>--%>
+                <%--<div>E-mail:<input type="text" name="text" size="25" /></div>--%>
+            	<%--<div>评论等级：<input name="" type="radio" value="" /><img src="images/pl1.gif"/> --%>
+            	<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/> --%>
+            	<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/> --%>
+            	<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/> --%>
+            	<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/></div>--%>
+            	<%--<div>评论内容：<textarea name="" cols="" rows=""></textarea></div>--%>
+                <%--<div>验证码：<input type="text"  size="15" /><img src="images/yz.gif"/></div>--%>
+                <%--<div><input type="button"  class="btn4" value=" " /></div>--%>
+            <%--</div>--%>
+            <%--</div>        --%>
         </div> 		   
         	   
 	</div>
@@ -114,8 +115,8 @@
 	<a href="#">公司简介</a><span>|</span><a href="#">免责条款</a><span>|</span><a href="#">隐私保护</a><span>|</span><a href="#">咨询热点</a><span>|</span><a href="#">合作招募</a><span>|</span><a href="#">配送方式</a><span>|</span><a href="#">联系我们</a>
     </div>
     <div class="footer2">
-	    @ 2011-2012 旭邦医疗商城 版权所有，并保留所有权利。<br />
-	   	 电话:029-62966051 87811277 传真：029-62966051 陕ICP备1109231号 技术支持：<a href="#">徽韵网络</a>
+		Copyright (C) 云起点 2009-2019, All Rights Reserved<br />
+		互联网违法和不良信息举报电话：4001066666-5 邮箱：service@cs.yunqidian.com
     </div>
 </div>
 </body>

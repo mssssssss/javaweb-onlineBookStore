@@ -1,3 +1,4 @@
+<%--显示图书的具体信息的页面--%>
 <%@page language="java" contentType="text/html; charset=gbk"%>
 <%@page import="com.bookstore.bean.BookInfo"%>
 <%@page import="com.bookstore.bean.BookDiscuss"%>
@@ -5,6 +6,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <style type="text/css">
+        a:hover{color: red;}
+    </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>云起点</title>
 <meta name="keywords" content="关键字" />
@@ -26,11 +30,13 @@
 <div class="top1">
 	<div class="top1_1">
    	欢迎您登录网上商城！
-   	用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> 
-   	密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> 
-   	<a href="#">忘记密码?</a> 
-   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">登录</a>
-   	<a href="${pageContext.request.contextPath}/background/index.jsp">注册</a>
+   	<%--用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> --%>
+   	<%--密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> --%>
+   	<%--<a href="#">忘记密码?</a> --%>
+   	<%--<a href="${pageContext.request.contextPath}/qtLogin.jsp">登录</a>--%>
+   	<%--<a href="${pageContext.request.contextPath}/background/index.jsp">注册</a>--%>
+        <a  href="${pageContext.request.contextPath}/qtLogin.jsp">用户登录</a>
+        <a  href="${pageContext.request.contextPath}/background/index.jsp">管理员登陆</a>
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">
@@ -42,19 +48,17 @@
         </div>
 		<div class="top1_2_r">
         	<ul class="other">
-            	<li><a href="<%=request.getContextPath() %>/gouwuche.jsp">
-            		<img src="images/car.gif"/><br />购物车</a></li>
-				<li><a href="#"><img src="images/car.gif" /><br />订单查询  </a></li>
-				<li><a href="#"><img src="images/car.gif" /><br />我的空间</a></li>
-				<li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17"><img src="images/car.gif" /><br />购书服务 </a></li>
-            </ul>
+            	<li><a href="#"><img src="images/car.jpg"/><br />购物车</a> </li>
+                <li><a href="#"><img src="images/car.jpg"/><br />订单查询</a></li>
+                <li><a href="#"><img src="images/car.jpg"/><br />我的积分</a></li>
+                <li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />关联网站</a></li>  </ul>
             <ul class="menu">
-            	<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">畅销</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">文学</a></li>
-                <li><a href="http://www.dangdang.com/">书系</a></li>
-                <li><a href="http://www.dangdang.com/">文化</a></li>
-                <li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17">经营</a></li>
+                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
+                <li><a href="#">小说</a></li>
+                <li><a href="#">文艺</a></li>
+                <li><a href="#">传记</a></li>
+                <li><a href="#">漫画</a></li>
+                <li><a href="about.jsp">关于</a></li>
             </ul>
         </div>
 	</div>
@@ -208,17 +212,17 @@
         <div class="middle9">
         	<div class="middle9tit">用户评论</div>
             <div class="middle_right9con">
-            	<div>用户名：匿名用户</div>
-                <div>E-mail:<input type="text" name="text" size="25" /></div>
-            	<div>评论等级：
-            		<input name="" type="radio" value="" /><img src="images/pl1.gif"/> 
-            		<input name="" type="radio" value="" /><img src="images/pl1.gif"/> 
-            		<input name="" type="radio" value="" /><img src="images/pl1.gif" /> 
-            		<input name="" type="radio" value="" /><img src="images/pl1.gif" /> 
-            		<input name="" type="radio" value="" /><img src="images/pl1.gif"/></div>
-            	<div>评论内容：<textarea name="" cols="" rows=""></textarea></div>
-                <div>验证码：<input type="text"  size="15" /><img src="images/yz.gif"/></div>
-                <div><input type="button"  class="btn4" value=" " /></div>
+            	<%--<div>用户名：匿名用户</div>--%>
+                <%--<div>E-mail:<input type="text" name="text" size="25" /></div>--%>
+            	<%--<div>评论等级：--%>
+            		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/>--%>
+            		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/>--%>
+            		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif" />--%>
+            		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif" />--%>
+            		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/></div>--%>
+            	<%--<div>评论内容：<textarea name="" cols="" rows=""></textarea></div>--%>
+                <%--<div>验证码：<input type="text"  size="15" /><img src="images/yz.gif"/></div>--%>
+                <%--<div><input type="button"  class="btn4" value=" " /></div>--%>
             </div>
             </div>        
         </div> 		   

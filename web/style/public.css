@@ -35,8 +35,8 @@ form{width:350px; height:30px; float:left;  margin-top:90px; margin-left:30px; d
 .footer3_in span{color:#CA2C21;}
 .inputsty { width:100px; border:1px solid #ccc; height:19px;}
 .btn1{width:40px; background:url(../images/btn2.gif) no-repeat; height:23px;  color:#3a2b2c; border:0px;}
-.other{width:230px; padding:0 0 0 326px;}
-.other li{ width:50px; float:left; text-align:center; margin:0 5px 0 0px; line-height:24px;}
+.other{width:240px; padding:0 0 0 326px;}
+.other li{ width:55px; float:left; text-align:center; margin:0 5px 0 0px; line-height:24px;}
 .other li a:hover{color:#F00; text-decoration:underline;}
 .menu{width:554px; overflow: hidden; _zoon:1; padding:33px 0 0 0;}
 .menu li{ width:80px; float:left; background: url(../images/menubg.gif) no-repeat; height:27px; margin:0 8px 0 0; text-align:center; font-family:"微软雅黑"; font-size:14px; line-height:27px; font-weight:bold;  }

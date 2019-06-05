@@ -26,17 +26,21 @@
   	location = "<%=request.getContextPath() %>/UpdateGwcItemNumServlet?id="+ bookId +"&num="+num;
   }
 </script>
+	<style type="text/css">
+		a:hover{
+			color:red;}
+	</style>
 </head>
 <body>
 <!-- top1 -->
 <div class="top1">
 	<div class="top1_1">
    	欢迎您登录网上商城！
-   	用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> 
-   	密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> 
-   	<a href="#">忘记密码?</a> 
-   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">登录</a>
-   	<a href="${pageContext.request.contextPath}/background/index.jsp">注册</a>
+   	<%--用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> --%>
+   	<%--密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> --%>
+   	<%--<a href="#">忘记密码?</a> --%>
+   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">用户登陆</a>
+   	<a href="${pageContext.request.contextPath}/background/index.jsp">管理员登陆</a>
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">
@@ -48,19 +52,19 @@
         </div>
 		<div class="top1_2_r">
         	<ul class="other">
-            	<li><a href="#"><img src="images/car.gif"/><br />购物车</a></li>
-				<li><a href="#"><img src="images/car.gif"/><br />订单查询  </a></li>
-				<li><a href="#"><img src="images/car.gif"/><br />我的空间</a></li>
-				<li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17"><img src="images/car.gif"/><br />购书服务 </a></li>
+            	<li><a href="#"><img src="images/car.jpg"/><br />购物车</a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />订单查询  </a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />我的空间</a></li>
+				<li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17"><img src="images/car.jpg"/><br />购书服务 </a></li>
             </ul>
             <ul class="menu">
-            	<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">畅销</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">文学</a></li>
-                <li><a href="http://www.dangdang.com/">书系</a></li>
-                <li><a href="http://www.dangdang.com/">文化</a></li>
-                <li><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17">经营</a></li>
-            </ul>
+				<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
+				<li><a href="#">小说</a></li>
+				<li><a href="#">文艺</a></li>
+				<li><a href="#">传记</a></li>
+				<li><a href="#">漫画</a></li>
+				<li><a href="about.jsp">关于</a></li>
+			</ul>
         </div>
 	</div>
 </div>
@@ -91,7 +95,7 @@
 				<td align="left" width="400">
 					<div class="shpic"><img src="<%=request.getContextPath() %>/imgsx/<%=gwcItem.getSmallImg() %>" /></div>
 					<span class="shname"><a href="<%=request.getContextPath() %>/ShowBookInfoServlet?id=<%=gwcItem.getBookId() %>"><%=gwcItem.getBookName() %></a><br />
-				    <span class="fccc"> 颜色：极乐绿 尺码：170/</span>92A</span>
+				    <span class="fccc"> 精装 正品</span>
 			    </td>
 				<td align="center" width="130">售 价 ：<%=gwcItem.getHyprice() %><span class="fccc"><del> <br />
 			    	市场价：<%=gwcItem.getPrice() %></del></span>
@@ -149,16 +153,16 @@
 				</ul>
 				<div id="main3">
 					<ul class="pannel">
-						<li class="pic"><a href="#" class="list"><img src="images/pic1.jpg"/><br /><span class="text">琅琅上口的百年老课本曾经</span> <span  class="fred">￥299</span></a></li>
-						<li class="pic"><a href="#" class="list"><img src="images/pic2.jpg"/><br /><span class="text">琅琅上口的百年老课本曾经滋琅</span> <span  class="fred">￥299</span></a> </li>
-						<li class="pic"><a href="#" class="list"><img src="images/pic3.jpg"/><br /><span class="text">琅琅上口的百年老课本曾经滋养</span> <span  class="fred">￥299</span></a></li>
-						<li class="pic"><a href="#" class="list"><img src="images/pic4.jpg"/><br /><span class="text">琅琅上口的百年老课本曾经滋养</span> <span  class="fred">￥299</span></a></li>
+						<li class="pic" ><a href="#" class="list"><img src="images/pic1.jpg"/><br /><span  style="alignment: center">活着</span><br> <span  class="fred">￥10</span></a></li>
+						<li class="pic"><a href="#" class="list"><img src="images/pic2.jpg"/><br /><span style="alignment: center">淡定的人生不寂寞</span><br> <span  class="fred">￥35</span></a> </li>
+						<li class="pic"><a href="#" class="list"><img src="images/pic3.jpg"/><br /><span style="alignment: center">30年后，你拿什么养活自己</span><br> <span  class="fred">￥30</span></a></li>
+						<li class="pic"><a href="#" class="list"><img src="images/pic4.jpg"/><br /><span style="alignment: center">百年孤独</span><br> <span  class="fred">￥99</span></a></li>
 					</ul>
 					<ul class="pannel">
-						<li class="pic"><a href="#" class="list"><img src="images/pic5.jpg"/><br /><span class="text">琅琅上口的百年老课本曾经</span> <span  class="fred">￥299</span></a></li>
-				 		<li class="pic"><a href="#" class="list"><img src="images/pic6.jpg"/><br /><span class="text">琅琅上口的百年老课本曾经滋养</span> <span  class="fred">￥299</span></a> </li>
-						<li class="pic"><a href="#" class="list"><img src="images/pic7.jpg"/><br /><span class="text">琅琅上口的百年老课本曾经滋养恤</span> <span  class="fred">￥299</span></a></li>
-						<li class="pic"><a href="#" class="list"><img src="images/pic8.jpg"/><br /><span class="text">琅琅上口的百年老课本曾经滋养 </span> <span  class="fred">￥299</span></a></li>
+						<li class="pic"><a href="#" class="list"><img src="images/pic5.jpg"/><br /><span style="alignment: center">你若安好，便是晴天</span> <br><span  class="fred">￥29</span></a></li>
+				 		<li class="pic"><a href="#" class="list"><img src="images/pic6.jpg"/><br><br><br /><span style="alignment: center">人脉是设计出来的</span> <br><span  class="fred">￥39</span></a> </li>
+						<li class="pic"><a href="#" class="list"><img src="images/pic7.jpg"/><br><br><br /><span style="alignment: center">红顶商人</span><br> <span  class="fred">￥49</span></a></li>
+						<li class="pic"><a href="#" class="list"><img src="images/pic8.jpg"/><br><br><br /><span style="alignment: center">女人要为理想而奋斗</span><br> <span  class="fred">￥35</span></a></li>
 					</ul>
 	  			</div>
 		  	</div>
@@ -169,33 +173,33 @@
 <div class="footer">
 	<ul class="lbox">
     	<li><a href="#">顾客必读</a></li>
-        <li><a href="#">订单的几种状态</a></li>
+        <li><a href="#">订单状态</a></li>
     </ul>
     <ul class="lbox">
-        <li><a href="#">会员等级折扣</a></li>
-        <li><a href="#">积分奖励计划</a></li>
+        <li><a href="#">会员积分</a></li>
+        <li><a href="#">积分换购</a></li>
     </ul>
    	<ul class="lbox">
-        <li><a href="#">顾客必读</a></li>
-        <li><a href="#">商品退货保证</a></li>
+        <li><a href="#">商品退货</a></li>
+        <li><a href="#">保修准则</a></li>
     </ul>
    	<ul class="lbox">
-        <li><a href="#">畅销图书</a></li>
-        <li><a href="#">文学作品</a></li>
+        <li><a href="#">购后事宜</a></li>
+        <li><a href="#">包修包换</a></li>
     </ul>
 </div>
 <div class="footer1">
-	<img src="images/footer1img.jpg" />
-	<img src="images/footer2img.jpg" /> 
-	<img src="images/footer3img.jpg" />
-	<img src="images/footer4img.jpg" />
-  	<img src="images/footer5img.jpg" />
-	<img src="images/footer6img.jpg" />           
+	<img width="152px" src="images/footer1img.jpg" />
+	<img width="152px" src="images/footer2img.jpg" />
+	<img width="152px" src="images/footer3img.jpg" />
+	<img width="152px" src="images/footer4img.jpg" />
+  	<img width="152px" src="images/footer5img.jpg" />
+	<img width="152px" src="images/footer6img.jpg" />
 </div>
 <!-- footer2 -->
 	<div class="footer2">
-		版权所有：www.xubangyiliao.com<br />
-		电话:029-62966051 87811277 传真：029-62966051 陕ICP备1109231号
+		Copyright (C) 云起点 2009-2019, All Rights Reserved<br />
+		互联网违法和不良信息举报电话：4001066666-5 邮箱：service@cs.yunqidian.com
 	</div>
 </body>
 </html>

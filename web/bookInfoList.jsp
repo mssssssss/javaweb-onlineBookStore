@@ -1,9 +1,15 @@
+<%--所有的书籍信息展示--%>
 <%@ page language="java" contentType="text/html; charset=gbk"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">--%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<style type="text/css">
+		a:hover{
+			color:red;
+		}
+	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>云起点</title>
 <meta name="keywords" content="关键字" />
@@ -45,18 +51,18 @@
         </div>
 		<div class="top1_2_r">
         	<ul class="other">
-            	<li><a href="${pageContext.request.contextPath}/gouwuche.jsp"><img src="images/car.gif"/><br />购物车</a></li>
-				<li><a href="#"><img src="images/car.gif"/><br />订单查询  </a></li>
-				<li><a href="#"><img src="images/car.gif"/><br />我的空间</a></li>
-				<li><a href="#"><img src="images/car.gif"/><br />购书服务 </a></li>
+            	<li><a href="${pageContext.request.contextPath}/gouwuche.jsp"><img src="images/car.jpg"/><br />购物车</a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />订单查询  </a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />我的积分</a></li>
+				<li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />关联网站</a></li>
             </ul>
             <ul class="menu">
-            	<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">畅销</a></li>
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">文学</a></li>
-                <li><a href="http://www.dangdang.com/">书系</a></li>
-                <li><a href="http://www.dangdang.com/">文化</a></li>
-                <li><a href="http://www.dangdang.com/">经营</a></li>
+				<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
+				<li><a href="#">小说</a></li>
+				<li><a href="#">文艺</a></li>
+				<li><a href="#">传记</a></li>
+				<li><a href="#">漫画</a></li>
+				<li><a href="about.jsp">关于</a></li>
             </ul>
         </div>
 	</div>
@@ -89,7 +95,8 @@
               	<div class="warpbor">
                 <div class="leftshop"><a href="${pageContext.request.contextPath}/ShowBookInfoServlet?id=${books.bookId}">
                 <img src="${pageContext.request.contextPath}/imgsx/${books.smallImg}" width="98" height="160"/></a></div>
-                <div class="righttext"><h3>目送：${books.author}</h3><p/> 
+                <%--<div class="righttext"><h3>目送：${books.author}</h3><p/> --%>
+					<div class="righttext"><h3>${books.bookName}:${books.author}</h3><p/>
        				 <span class="fontcc">(50629条评论)</span><br />
        				  ${books.author}著/${books.pbdate}<br />
        				  ${books.context}
