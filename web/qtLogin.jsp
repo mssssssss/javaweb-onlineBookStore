@@ -91,15 +91,18 @@
 <div class="full">
   <div class="t_Top">
 	  	<div align="center" class="divcss5" style=" font-size:40px; margin-top:20px">网上图书商城前台登录</div>
+      <br/>
 		<div class="n_dl_r">
-		<a href="<%=request.getContextPath()%>/QtLoginServlet" class="color_56">登录</a> <span class="color_55">|</span> 
-		<a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17" class="color_56">易购新手</a> <span class="color_55">|</span> 
-		<a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17" class="color_56">网站帮助</a></div>
+		<%--<a href="<%=request.getContextPath()%>/QtLoginServlet" class="color_56"></a> <span class="color_55">|</span>--%>
+		<%--<a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17" class="color_56"></a> <span class="color_55">|</span>--%>
+		<%--<a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17" class="color_56"></a>--%>
+		</div>
+
 		<div class="n_dl_l"></div>
 		<div class="n_dl_l_1"></div>
 	  </div>
 	  <form action="<%=request.getContextPath()%>/QtLoginServlet" method="post">
-	  <input name="source" type="hidden" value="http://www.egou.com/" />
+	  <%--<input name="source" type="hidden" value="http://www.egou.com/" />--%>
 		<div class="n_dl_c">
 			<div class="n_dl_c_l">
 				<div class="n_dl_c_l_a"></div>
@@ -154,38 +157,38 @@
 				</div>
 				<div class="n_dl_c_l_c"></div>
 			</div>
-			<div class="n_dl_c_r">
-				<div class="n_dl_c_r_a"></div>
-				<div class="n_dl_c_r_b">
-				  <table width="248" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td width="46" height="40" align="center"><img src="images/couponregister/icon_116.gif" width="20" height="20" /></td>
-                      <td width="202" height="40" class="color_58">免费注册即刻享受购物返点!</td>
-                    </tr>
-                    <tr>
-                      <td height="40" align="center"><img src="images/couponregister/icon_117.gif" width="23" height="20" /></td>
-                      <td height="40" class="color_58">不购物也能拿现金!</td>
-                    </tr>
-                    <tr>
-                      <td height="40" align="center"><img src="images/couponregister/icon_118.gif" width="20" height="20" /></td>
-                      <td height="40" class="color_58">推荐会员，奖励现金!</td>
-                    </tr>
-                    <tr>
-                      <td height="40" align="center"><img src="images/couponregister/icon_119.gif" width="24" height="21" /></td>
-                      <td height="40" class="color_58">不间断的送优惠券!</td>
-                    </tr>
-                    <tr>
-                      <td height="40" align="center"><img src="images/couponregister/icon_120.gif" width="18" height="22" /></td>
-                      <td height="40" class="color_58">易购会员独享优惠活动!</td>
-                    </tr>
-                    <tr>
-                      <td height="33" colspan="4" align="center" style="color: red;">
-                      在易购您可以畅读全场!</td>
-                    </tr>
-                  </table>
-				</div>
-				<div class="n_dl_c_r_c"></div>
-			</div>
+			<%--<div class="n_dl_c_r">--%>
+				<%--<div class="n_dl_c_r_a"></div>--%>
+				<%--<div class="n_dl_c_r_b">--%>
+				  <%--<table width="248" border="0" cellspacing="0" cellpadding="0">--%>
+                    <%--<tr>--%>
+                      <%--<td width="46" height="40" align="center"><img src="images/couponregister/icon_116.gif" width="20" height="20" /></td>--%>
+                      <%--<td width="202" height="40" class="color_58">免费注册即刻享受购物返点!</td>--%>
+                    <%--</tr>--%>
+                    <%--<tr>--%>
+                      <%--<td height="40" align="center"><img src="images/couponregister/icon_117.gif" width="23" height="20" /></td>--%>
+                      <%--<td height="40" class="color_58">不购物也能拿现金!</td>--%>
+                    <%--</tr>--%>
+                    <%--<tr>--%>
+                      <%--<td height="40" align="center"><img src="images/couponregister/icon_118.gif" width="20" height="20" /></td>--%>
+                      <%--<td height="40" class="color_58">推荐会员，奖励现金!</td>--%>
+                    <%--</tr>--%>
+                    <%--<tr>--%>
+                      <%--<td height="40" align="center"><img src="images/couponregister/icon_119.gif" width="24" height="21" /></td>--%>
+                      <%--<td height="40" class="color_58">不间断的送优惠券!</td>--%>
+                    <%--</tr>--%>
+                    <%--<tr>--%>
+                      <%--<td height="40" align="center"><img src="images/couponregister/icon_120.gif" width="18" height="22" /></td>--%>
+                      <%--<td height="40" class="color_58">易购会员独享优惠活动!</td>--%>
+                    <%--</tr>--%>
+                    <%--<tr>--%>
+                      <%--<td height="33" colspan="4" align="center" style="color: red;">--%>
+                      <%--在易购您可以畅读全场!</td>--%>
+                    <%--</tr>--%>
+                  <%--</table>--%>
+				<%--</div>--%>
+				<%--<div class="n_dl_c_r_c"></div>--%>
+			<%--</div>--%>
 	  	</div>
 	 </form>
 			
