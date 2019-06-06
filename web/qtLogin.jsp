@@ -6,10 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 
-<title>易购网 － 网站登录</title>
+<title>网站前台登陆</title>
 <link href="css/front/coupon_register.css" rel="stylesheet" type="text/css" />
 <link href="css/front/common.css" rel="stylesheet" type="text/css" />
 <link href="css/front/css.css" rel="stylesheet" type="text/css" />
+
     <%--<link href="background/css/bootstrap.css" rel="stylesheet" type="text/css" />--%>
 <script language="javascript" src="js/util.js"></script>
 <script language="javascript" type="text/javascript">
@@ -85,6 +86,9 @@
 		}
     }
 </script>
+    <style>
+        a:hover{color: red;}
+    </style>
 </head>
 
 <body>
@@ -103,16 +107,17 @@
 	  </div>
 	  <form action="<%=request.getContextPath()%>/QtLoginServlet" method="post">
 	  <%--<input name="source" type="hidden" value="http://www.egou.com/" />--%>
-		<div class="n_dl_c">
-			<div class="n_dl_c_l">
-				<div class="n_dl_c_l_a"></div>
-				<div class="n_dl_c_l_b">
-				  <table width="262" border="0" cellspacing="0" cellpadding="0">
+		<div align="center">
+			<div align="center">
+				<div ><img src="images/couponregister/i_320.jpg" align="center"> </div>
+				<div   style="margin:0; padding:10px 40px 0 43px; width:262px;  border-left:1px solid #BBE3FF; border-right:1px solid #BBE3FF;">
+				  <table align="center" width="262" border="0" cellspacing="0" cellpadding="0">
+                    <%--<tr>--%>
+                      <%--&lt;%&ndash;<td height="30" colspan="4"><span class="color_1" id="errorMsg"></span></td>&ndash;%&gt;--%>
+                        <%--<td>&nbsp;</td>--%>
+                    <%--</tr>--%>
                     <tr>
-                      <td height="30" colspan="4"><span class="color_1" id="errorMsg"></span></td>
-                    </tr>
-                    <tr>
-                      <td width="55" height="35">用户名：</td>
+                      <td width="120" height="40" style="font-size: 15px" >用户名:</td>
                       <td height="35" colspan="3">
                       <input type="text" name="username" id="username"  onblur="checkUserName()" tabindex="1" class="input_35" />
                       <script language="javascript" type="text/javascript">
@@ -125,8 +130,8 @@
                       </td>
                     </tr>
                     <tr>
-                      <td height="35">密&nbsp;&nbsp;码：</td>
-                      <td height="35" colspan="3"><input type="password" name="password" id="password"  onblur="checkPassword()" tabindex="2" class="input_35" />
+                      <td height="40" style="font-size: 15px">密&nbsp;&nbsp;码：</td>
+                      <td height="35" colspan="3"><input type="password" name="password" id="password"  onblur="checkPassword()" tabindex="2" class="input_35"  />
                       <script language="javascript" type="text/javascript">
 			              msg='';
 			              if(""!=msg){
@@ -146,8 +151,10 @@
                      	 记住我&nbsp;&nbsp; <a href="#" class="color_57">忘记密码</a></td>
                     </tr>
                     <tr>
-                      <td height="55" colspan="4" align="center">
-                      <input style="background-color: #1A7CBC;border-radius:4px; width: 70px; height:30px; color: white;" type="submit" name="Submit" value="登 录"  tabindex="5" onclick="check(form)" /></td>
+                        <td>&nbsp;</td>
+                      <td height="55" colspan="2" align="right">
+                      <input style="background-color: #1A7CBC;border-radius:4px; width: 70px; height:30px; color: white; alignment: left" type="submit" name="Submit" value="登 录"  tabindex="5" onclick="check(form)" /></td>
+                        <td colspan="2" align="right"><a href="UserRegister.jsp"><input style="background-color: #1A7CBC;border-radius:4px; width: 70px; height:30px; color: white;" type="button" name="Register" value="注 册"  tabindex="5" /></a></td>
                     </tr>
                     <%--<tr>--%>
                       <%--<td height="25" colspan="4" align="center">--%>
@@ -197,14 +204,15 @@
 		<div class="Bottom_2">
 		  <table width="950" cellspacing="0" cellpadding="0">
 			<tr>
-			  <td colspan="3" align="center"><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17" target="_blank" class="color">关于易购</a> | <a href="#" target="_blank" class="color">媒体报道</a> | <a href="#"  class="color">易购生活</a> | <a href="#" target="_blank" class="color">广告合作</a> | <a href="#" target="_blank" class="color">建议疑问</a> | <a href="#" target="_blank" class="color">网站帮助</a> | <a href="#" target="_blank" class="color">网站地图</a> | <a href="#" target="_blank" class="color">友情链接</a> |
+			  <td colspan="3" align="center"><a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17" target="_blank" class="color">关于说明</a> | <a href="#" target="_blank" class="color">媒体报道</a> | <a href="#"  class="color">网上购物</a> | <a href="#" target="_blank" class="color">广告合作</a> | <a href="#" target="_blank" class="color">建议疑问</a> | <a href="#" target="_blank" class="color">网站帮助</a> | <a href="#" target="_blank" class="color">网站地图</a> | <a href="#" target="_blank" class="color">友情链接</a> |
 	   			<a href="http://book.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=16409889721_0_1139ce8fca7e4ebfb6cb34d7e9d98c17" target="_blank" class="color">联系我们</a>
 	   		  </td>
 			</tr>
 			<tr>
 			  <td width="250"></td>
-			  <td width="389" align="center"><span style="color:#666666">Copyright &copy; 2009-2019 by   www.egou.com all rights reserved<br />
-				<a href="http://www.emar.com.cn" target="_blank" class="color_2">亿玛在线</a> 旗下网站<a href="http://www.miibeian.gov.cn/" target="_blank" class="color_2">京ICP证080025号</a> </span></td>
+			  <td width="389" align="center"><span style="color:#666666"> Copyright &copy; 云起点 2009-2019, All Rights Reserved<br />
+				<a  style="text-decoration: none;" href="#" >云起点  |</a>
+                  <a style="text-decoration: none;"href="#">营业执照  |</a><a style="text-decoration: none;"href="#" > 京ICP证070359号</a> </span></td>
 			 	<td width="309" height="60" align="left" valign="middle"></td>
 			</tr>
 		  </table>

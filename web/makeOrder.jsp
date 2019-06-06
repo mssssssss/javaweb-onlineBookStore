@@ -32,9 +32,9 @@
 	<div class="top1_2">
 		<div class="top1_2_l">
             <ul class="yudingCon">
-                <li>书名:<input type="text" name="" class="kuang" />  </li>
-            	<li>作者:<input type="text" name="" class="kuang" />  </li>
-            	<li class="ribtn"><input type="image" src="images/btn.gif" class="btn"/></li>
+                <%--<li>书名:<input type="text" name="" class="kuang" />  </li>--%>
+            	<%--<li>作者:<input type="text" name="" class="kuang" />  </li>--%>
+            	<%--<li class="ribtn"><input type="image" src="images/btn.gif" class="btn"/></li>--%>
 		</ul>
         </div>
 		<div class="top1_2_r">
@@ -52,7 +52,7 @@
 				<li><a href="#">小说</a></li>
 				<li><a href="#">文艺</a></li>
 				<li><a href="#">传记</a></li>
-				<li><a href="#">漫画</a></li>
+				<li><a href="help.jsp">帮助</a></li>
 				<li><a href="about.jsp">关于</a></li>
             </ul>
         </div>

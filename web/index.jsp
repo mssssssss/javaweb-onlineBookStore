@@ -13,7 +13,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>云起点aa</title>
+<title>云起点</title>
 <meta name="keywords" content="关键字" />
 <meta name="description" content="页面描述" />
 <link rel="stylesheet" href="style/public.css" type="text/css" />
@@ -43,11 +43,11 @@
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">
-            <ul class="yudingCon">
-                <li>书名:<input type="text" value="" class="kuang" />  </li>
-            	<li>作者:<input type="text" value="" class="kuang" />  </li>
-            	<li class="ribtn"><input type="image" src="images/btn.gif" class="btn"/></li>
-		</ul>
+            <%--<ul class="yudingCon">--%>
+                <%--<li>书名:<input type="text" value="" class="kuang" />  </li>--%>
+            	<%--<li>作者:<input type="text" value="" class="kuang" />  </li>--%>
+            	<%--<li class="ribtn"><input type="image" src="images/btn.gif" class="btn"/></li>--%>
+		<%--</ul>--%>
         </div>
 		<div class="top1_2_r">
         	<ul class="other">
@@ -68,7 +68,7 @@
                     <li><a href="#">小说</a></li>
                     <li><a href="#">文艺</a></li>
                 <li><a href="#">传记</a></li>
-                <li><a href="#">漫画</a></li>
+                <li><a href="help.jsp">帮助</a></li>
                 <li><a href="about.jsp">关于</a></li>
             </ul>
         </div>
@@ -284,5 +284,80 @@
     Copyright (C) 云起点 2009-2019, All Rights Reserved<br />
     互联网违法和不良信息举报电话：4001066666-5 邮箱：service@cs.yunqidian.com
 </div>
+
+<script>
+    onload = function() {
+        var click_cnt = 0;
+        var $html = document.getElementsByTagName("html")[0];
+        var $body = document.getElementsByTagName("body")[0];
+        $html.onclick = function(e) {
+            var $elem = document.createElement("b");
+            $elem.style.color = "#E94F06";
+            $elem.style.zIndex = 9999;
+            $elem.style.position = "absolute";
+            $elem.style.select = "none";
+            var x = e.pageX;
+            var y = e.pageY;
+            $elem.style.left = (x - 10) + "px";
+            $elem.style.top = (y - 20) + "px";
+            clearInterval(anim);
+            switch (++click_cnt) {
+                case 10:
+                    $elem.innerText = "OωO";
+                    break;
+                case 20:
+                    $elem.innerText = "(??? ? ???)";
+                    break;
+                case 30:
+                    $elem.innerText = "(??? ? ???)";
+                    break;
+                case 40:
+                    $elem.innerText = "(???_???)";
+                    break;
+                case 50:
+                    $elem.innerText = "（￣へ￣）";
+                    break;
+                case 60:
+                    $elem.innerText = "(╯°口°)╯(┴—┴";
+                    break;
+                case 70:
+                    $elem.innerText = "?( ??皿?? )?";
+                    break;
+                case 80:
+                    $elem.innerText = "╮(?>口<?)╭";
+                    break;
+                case 90:
+                    $elem.innerText = "( ? ??皿??)?????";
+                    break;
+                case 100:
+                case 101:
+                case 102:
+                case 103:
+                case 104:
+                case 105:
+                    $elem.innerText = "(?°?д°?)";
+                    break;
+                default:
+                    // $elem.innerText = "?";
+                    $elem.innerText = "OωO";
+                    break;
+            }
+            $elem.style.fontSize = Math.random() * 10 + 8 + "px";
+            var increase = 0;
+            var anim;
+            setTimeout(function() {
+                anim = setInterval(function() {
+                    if (++increase == 150) {
+                        clearInterval(anim);
+                        $body.removeChild($elem);
+                    }
+                    $elem.style.top = y - 20 - increase + "px";
+                    $elem.style.opacity = (150 - increase) / 120;
+                }, 8);
+            }, 70);
+            $body.appendChild($elem);
+        };
+    };
+</script>
 </body>
 </html>
