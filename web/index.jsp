@@ -6,6 +6,7 @@
 <%@page import="com.bookstore.bean.BookType"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.Set"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
 <%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">--%>
@@ -34,20 +35,19 @@
 <!-- top1 -->
 <div class="top1">
 	<div class="top1_1">
-   	欢迎您登录网上商城！
-   	<%--用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> --%>
-   	<%--密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> --%>
-   	<%--<a href="#">忘记密码?</a> --%>
+        <c:choose >
+            <c:when test="${sessionScope.customerInfo.custName!=null}">
+                当前用户身份:<b>${sessionScope.customerInfo.custName}</b> 欢迎访问本商城！&nbsp;&nbsp;&nbsp;
+            </c:when>
+            <c:otherwise>
+                当前用户身份:游客 登录后方可下单&nbsp;&nbsp;&nbsp;
+            </c:otherwise>
+        </c:choose>
    	<a  href="${pageContext.request.contextPath}/qtLogin.jsp">用户登录</a>
    	<a  href="${pageContext.request.contextPath}/background/index.jsp">管理员登陆</a>
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">
-            <%--<ul class="yudingCon">--%>
-                <%--<li>书名:<input type="text" value="" class="kuang" />  </li>--%>
-            	<%--<li>作者:<input type="text" value="" class="kuang" />  </li>--%>
-            	<%--<li class="ribtn"><input type="image" src="images/btn.gif" class="btn"/></li>--%>
-		<%--</ul>--%>
         </div>
 		<div class="top1_2_r">
         	<ul class="other">
@@ -61,9 +61,6 @@
 				<li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />关联网站</a></li>
             </ul>
             <ul class="menu">
-            	<%--<li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>--%>
-                <%--<li><a href="<%=request.getContextPath() %>/InitIndexServlet">小说</a></li>--%>
-                <%--<li><a href="<%=request.getContextPath() %>/InitIndexServlet">文艺</a></li>--%>
                     <li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
                     <li><a href="#">小说</a></li>
                     <li><a href="#">文艺</a></li>
@@ -282,7 +279,7 @@
 <!-- footer2 -->
 <div class="footer2">
     Copyright (C) 云起点 2009-2019, All Rights Reserved<br />
-    互联网违法和不良信息举报电话：4001066666-5 邮箱：service@cs.yunqidian.com
+    互联网违法和不良信息举报电话：4001066666-5 邮箱：simaqinsheng@gmail.com
 </div>
 
 <script>

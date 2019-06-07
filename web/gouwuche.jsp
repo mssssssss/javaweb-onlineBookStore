@@ -2,6 +2,8 @@
 <%@page import="com.bookstore.servlet.shoppingCart.Gouwuche"%>
 <%@page import="java.util.Collection"%>
 <%@page import="com.bookstore.servlet.shoppingCart.GouwucheItem"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -35,10 +37,14 @@
 <!-- top1 -->
 <div class="top1">
 	<div class="top1_1">
-   	欢迎您登录网上商城！
-   	<%--用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> --%>
-   	<%--密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> --%>
-   	<%--<a href="#">忘记密码?</a> --%>
+		<c:choose >
+			<c:when test="${sessionScope.customerInfo.custName!=null}">
+				当前用户身份:<b>${sessionScope.customerInfo.custName}</b> 欢迎访问本商城！&nbsp;&nbsp;&nbsp;
+			</c:when>
+			<c:otherwise>
+				当前用户身份:游客 登录后方可下单&nbsp;&nbsp;&nbsp;
+			</c:otherwise>
+		</c:choose>
    	<a href="${pageContext.request.contextPath}/qtLogin.jsp">用户登陆</a>
    	<a href="${pageContext.request.contextPath}/background/index.jsp">管理员登陆</a>
     </div>

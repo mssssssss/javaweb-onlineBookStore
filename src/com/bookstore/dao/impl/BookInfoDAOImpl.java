@@ -187,11 +187,6 @@ public class BookInfoDAOImpl implements IBookInfoDAO {
 	//获取最新商品
 	public List<BookInfo> findBySjdate(int num) {
 		List<BookInfo> bookInfos = new Vector<BookInfo>();
-		/*String sql = "select top "+num+" " +
-				"bookId,bookName,booktypeId,author,pbName," +
-				"context,smallImg,bigImg,price,pbdate,hyprice," +
-				"bookStates,sjdate,num,saleCount " +
-				"from bookInfo order by sjdate desc";*/
 		String sql = "select * from bookInfo order by sjdate desc limit "+num+"";
 		DBManager dbManager = new DBManager();
 		ResultSet rs = dbManager.query(sql);
@@ -226,11 +221,7 @@ public class BookInfoDAOImpl implements IBookInfoDAO {
 	//获取热销商品
 	public List<BookInfo> findBySaleCount(int num) {
 		List<BookInfo> bookInfos = new Vector<BookInfo>();
-		/*String sql = "select top "+num+" " +
-				"bookId,bookName,booktypeId,author,pbName," +
-				"context,smallImg,bigImg,price,pbdate," +
-				"hyprice,bookStates,sjdate,num,saleCount " +
-				"from bookInfo order by saleCount desc";*/
+
 		String sql = "select * from bookInfo order by saleCount desc limit "+num+"";
 		DBManager dbManager = new DBManager();
 		ResultSet rs = dbManager.query(sql);
@@ -265,11 +256,7 @@ public class BookInfoDAOImpl implements IBookInfoDAO {
 	//获取推荐商品
 	public List<BookInfo> findTjbooks(int num) {
 		List<BookInfo> bookInfos = new Vector<BookInfo>();
-		/*String sql = "select top "+num+" " +
-				"bookId,bookName,booktypeId,author,pbName," +
-				"context,smallImg,bigImg,price,pbdate," +
-				"hyprice,bookStates,sjdate,num,saleCount " +
-				"from bookInfo";*/
+
 		String sql = "select * from bookInfo limit "+num+"";
 		DBManager dbManager = new DBManager();
 		ResultSet rs = dbManager.query(sql);

@@ -3,6 +3,7 @@ package com.bookstore.servlet.shoppingCart;
 import com.bookstore.bean.CustomerInfo;
 import com.bookstore.bean.OrderDetail;
 import com.bookstore.bean.OrderMain;
+import com.bookstore.common.DateConvert;
 import com.bookstore.dao.IOrderDetailDAO;
 import com.bookstore.dao.IOrderMainDAO;
 import com.bookstore.dao.impl.OrderDetailDAOImpl;
@@ -17,10 +18,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 public class MakeOrderServlet extends HttpServlet {
 	
@@ -40,11 +38,10 @@ public class MakeOrderServlet extends HttpServlet {
 		
 		//1 向订单主表添加一条数据
 		OrderMain orderMain = new OrderMain();
-		//201508102038777
 		Date now = new Date();
-		DateFormat df = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+		String orderNum = DateConvert.convertToString(now, "yyyy-MM-dd-HH-mm-ss-SSS");
 		//订单编号 
-		String orderNum = df.format(now);
+		/*String orderNum = df.format(now);*/
 		orderMain.setOrderNum(orderNum);
 		//客户姓名
 		int customerId = customerInfo.getCustId();
@@ -68,7 +65,7 @@ public class MakeOrderServlet extends HttpServlet {
 		orderMain.setSumprice(sumprice);
 		
 		//2 向订单明细表添加一条到多条数据
-		List<OrderDetail> orderDetails = new Vector<OrderDetail>();
+		List<OrderDetail> orderDetails = new ArrayList<>();
 		Collection<GouwucheItem> items = gwc.getAllItems();
 		for (GouwucheItem item : items) {
 			OrderDetail orderDetail = new OrderDetail();
@@ -81,16 +78,21 @@ public class MakeOrderServlet extends HttpServlet {
 			orderDetails.add(orderDetail);
 		}
 		
-		IOrderMainDAO orderMainDAO = new OrderMainDAOImpl();
+
 		IOrderDetailDAO orderDetailDAO = new OrderDetailDAOImpl();
+
+
+		IOrderMainDAO orderMainDAO = new OrderMainDAOImpl();
+		orderMainDAO.save(orderMain);
 		try {
 			orderMainDAO.save(orderMain);
 			for (OrderDetail orderDetail : orderDetails) {
 				orderDetailDAO.save(orderDetail);
-			}	
+			}
+			//orderDetailDAO.save(orderDetails);
 			gwc.clear();
 			//输出编码格式
-			response.setContentType("text/html; charset=gbk");
+			response.setContentType("text/html; charset=utf-8");
 			PrintWriter out = response.getWriter();
 			out.print("订单编号是:" + orderNum);
 		} catch (Exception e) {

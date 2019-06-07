@@ -213,6 +213,7 @@ a.Top_menu_1:hover {display:block; width:70px; height:18px; padding:13px 0 0 0; 
 /* Ò³ÃæÎ²²¿ */
 .Bottom{width:950px; margin:0 auto; margin-top:3px; padding:0;}
 .Bottom_1{width:950px; height:1px; margin:0; padding:0; border-bottom:1px solid #CCCCCC; float:left; overflow:hidden;}
-.Bottom_2{width:950px; margin:10px 0 0 0; padding:0; line-height:200%; text-align:center; float:left;}
+.Bottom_2{width:950px; margin:10px 0 0 0; padding:0; line-height:200%; text-align:center; float:left;position: absolute;
+	bottom: 0px;}
 
 

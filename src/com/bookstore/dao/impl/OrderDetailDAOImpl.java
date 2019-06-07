@@ -15,7 +15,8 @@ public class OrderDetailDAOImpl implements IOrderDetailDAO {
 	public boolean save(OrderDetail orderDetail) {
 		String sql = "insert into orderDetail(orderNum, bookId, num) " +
 				"values('"+orderDetail.getOrderNum()+"', " +
-				""+orderDetail.getBookId()+", "+orderDetail.getNum()+")";
+				"'"+orderDetail.getBookId()+"', "+
+				"'"+orderDetail.getNum()+"')";
 		DBManager dbManager = new DBManager();
 		return (dbManager.update(sql) == 1);
 	}
@@ -27,6 +28,7 @@ public class OrderDetailDAOImpl implements IOrderDetailDAO {
 				String sql = "insert into OrderDetail (orderNum,bookId,num) " +
 				"values ('"+orderDetail.getOrderNum()+"','"+orderDetail.getBookId()+"','"+orderDetail.getNum()+"')";
 				dbManager.update(sql);
+				System.out.println("≤Â»Î≥…π¶");
 			}	
 		} catch (Exception e) {
 			return false;

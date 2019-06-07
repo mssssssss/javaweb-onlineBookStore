@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta name="viewport" content="width=1024" />
-<title>我的购物袋</title>
+<title>我的购物车</title>
 <link rel="stylesheet" type="text/css" href="style/style.css" />
 <link rel="stylesheet" type="text/css" href="style/orderInfo.css" />
 <link rel="stylesheet" href="style/public.css" type="text/css" />
@@ -21,11 +21,14 @@
 <body>
 <div class="top1">
 	<div class="top1_1">
-   	欢迎您登录网上商城！
-   	<%--用户名：<input type="text" name="name" value="${sessionScope.customerInfo.custName}" class="inputsty"/> --%>
-   	<%--密码：<input type="password" name="password" value="${sessionScope.customerInfo.pwd}" class="inputsty"/> --%>
-   	<%--<a href="#">忘记密码?</a> --%>
-
+		<c:choose >
+			<c:when test="${sessionScope.customerInfo.custName!=null}">
+				当前用户身份:<b>${sessionScope.customerInfo.custName}</b> 欢迎访问本商城！&nbsp;&nbsp;&nbsp;
+			</c:when>
+			<c:otherwise>
+				当前用户身份:游客 登录后方可下单&nbsp;&nbsp;&nbsp;
+			</c:otherwise>
+		</c:choose>
    	<a href="${pageContext.request.contextPath}/qtLogin.jsp">用户登录</a>
    	<a href="${pageContext.request.contextPath}/background/index.jsp">管理员登陆</a>
     </div>
@@ -114,7 +117,7 @@
 				  </TBODY></TABLE></div></div>
 				</div></div>
 			<div id=part_payTypeAndShipType>
-			<div class=o_show>
+			<%--<div class=o_show>
 			<h1>支付及配送方式&nbsp;<A id=linkPayTypeShipType 
 			onclick=showForm_payTypeAndShipType(this); href="javascript:void(0)">[修改]</A></h1>
 			<div id=updateInfo_payType></div>
@@ -136,10 +139,10 @@
 			  <TR style="DISPLAY: none">
 				<TD style="TEXT-ALIGN: right">自提时间：</TD>
 				<TD style="COLOR: red">{PickTime}</TD></TR></TBODY></TABLE></div>
-			<div class=footsty></div></div></div><!--支付方式及配送方式结束-->
+			<div class=footsty></div></div></div><!--支付方式及配送方式结束-->--%>
 			<!--发票信息开始-->
 <div id=part_invoice>
-<div class=o_show>
+<%--<div class=o_show>
 <h1>发票信息&nbsp;<A onclick=showForm_invoice(this) href="javascript:void(0)">[修改]</A></h1>
 <div class=middle>
 <TABLE style="WIDTh: 100%; DISPLAY: none">
@@ -166,11 +169,11 @@
   <TR>
     <TD 
 style="TEXT-ALIGN: left; PADDING-LEFT: 22px">不开发票</TD></TR></TBODY></TABLE></div>
-<div class=footsty></div></div></div><!--发票信息结束--><!--Cart信息开始-->
+<div class=footsty></div></div></div><!--发票信息结束--><!--Cart信息开始-->--%>
 <div id=part_cart></div><!--Cart信息开始--><!--有货先发开始-->
-<div style="PADDING-BOTTOM: 8px; PADDING-LEFT: 30px; PADDING-RIGhT: 0px; COLOR: red; PADDING-TOP: 8px" id=part_FirstInstockShip>
+<%--<div style="PADDING-BOTTOM: 8px; PADDING-LEFT: 30px; PADDING-RIGhT: 0px; COLOR: red; PADDING-TOP: 8px" id=part_FirstInstockShip>
 	<LABEL for=chk_FirstInstockShip>先发有货商品（如果订单部分商品缺货，优先配送有货商品）</LABEL> 
-	</div>
+	</div>--%>
 </div>
 	    <dl id="myCartTitle">
         	<dt>确认挑选的商品</dt>

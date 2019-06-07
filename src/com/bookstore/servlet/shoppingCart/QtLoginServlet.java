@@ -42,8 +42,12 @@ public class QtLoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("customerInfo", customerInfo);
 			session.setAttribute("customerDetailInfo", customerDetailInfo);
+
 			//重定向到下订单界面
-			response.sendRedirect("makeOrder.jsp");
+			//response.sendRedirect("makeOrder.jsp");
+
+			//request.getRequestDispatcher("/InitIndexServlet").forward(request,response);
+			response.sendRedirect("/InitIndexServlet");
 		}
 	}
 }
