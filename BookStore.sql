@@ -69,7 +69,7 @@ insert  into `bookinfo`(`bookId`,`bookName`,`booktypeId`,`author`,`pbName`,`cont
 (3,'活着',3,'余华','作家出版社','《活着》是一篇沉重且意义深长的小说','huozhe.jpg','huozhe.jpg',16,'2010-11-01',10,1,NULL,100,0),
 (4,'12个我',3,'安定医院郝医生','四川文艺出版社','《你也是蘑菇吗》之后，郝医生再度带来与精神病人“斗智斗勇”的脑洞日常','gewo.jpg','gewo.jpg',45,'2018-05-17',38,1,NULL,100,0),
 (5,'倾城之恋',2,'张爱玲','湖南文艺出版社','在这动荡的世界里，钱财，地产，天长地久的一切，全不可靠了。靠得住的只有她腔子里的这口气，还有睡在她身边的这个人','qincheng.jpg','qincheng.jpg',40,'2012-08-24',30,1,NULL,100,0),
-(6,'?????????',4,'zz?????','?????????????????','q','zhoueng.jpg','zhoueng.jpg',49,'2017-07-09',33,1,'2019-06-05',100,0),
+(6,'周恩来传',4,'迪克威尔逊','国际文化出版公司','作者以详实权威的资料为基础，再现了周恩来具有传奇性的一生，分析了他的性格、气质和他的工作作风，以及他给新中国成立和发展带来的巨大影响，是一部全面、深刻又不失独特见解的著作。','zhoueng.jpg','zhoueng.jpg',49,'2017-07-09',33,1,'2019-06-05',100,0),
 (7,'念楼学短',5,'锺叔河 ','后浪出版社','百字版《古文观止》 读古文，都应先学其短','nianlou.jpg','nianlou.jpg',37,'2018-08-01',24,1,NULL,100,0),
 (8,'资治通鉴',5,'司马光','岳麓书社','中国史学的不朽巨著','zizhi.jpg','zizhi.jpg',34,'2011-03-22',22,1,NULL,100,0),
 (9,'挪威的森林',4,'村上春树',' 上海译文出版社','故事讲述主角渡边纠缠在情绪不稳定且患有精神疾病的直子和开朗活泼的小林绿子之间，苦闷彷徨，最终展开了自我救赎和成长的旅程。','nuowei.jpg','nuowei.jpg',39,'2018-02-01',36,1,NULL,100,0),
@@ -146,7 +146,7 @@ CREATE TABLE `customerinfo` (
   `pwd` varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `email` varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`custId`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*Data for the table `customerinfo` */
 
@@ -158,7 +158,8 @@ insert  into `customerinfo`(`custId`,`custName`,`pwd`,`email`) values
 (5,'bbb','123456','xiaolan@qq.com'),
 (6,'123','66666','meimei@qq.com'),
 (7,'niko','326','2516085027@qq.com'),
-(9,'1','1','1');
+(9,'1','1','1'),
+(10,'琴生','19990326','2516085027@qq.com');
 
 /*Table structure for table `employee` */
 
