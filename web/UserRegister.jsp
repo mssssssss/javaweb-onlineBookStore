@@ -115,7 +115,7 @@
                 case 103:
                 case 104:
                 case 105:
-                    $elem.innerText = "(ꐦ°᷄д°᷅)";
+                    $elem.innerText = " (ꐦ°᷄д°᷅)";
                     break;
                 default:
                     $elem.innerText = "❤";
