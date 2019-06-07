@@ -1,5 +1,5 @@
-<%--����Ա����������棨�Ҳ��������в�ѯ����Ϣ���ڴ���ʾ��Ĭ������ǹ��ܵ�һЩ��������--%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%--管理员界面的主界面（右部），所有查询的信息都在此显示，默认情况是功能的一些基本介绍--%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <html>
 <head>
 <style>
@@ -11,7 +11,7 @@
 /*.wr4 {	FONT-SIZE: 12px; LINE-HEIGHT: 150%}*/
 /*// -->*/
 </style>
-<title>����ͼ���̳Ǻ�̨����ϵͳ</title>
+<title>网上图书商城后台管理系统</title>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 </head>
 
@@ -19,30 +19,30 @@
 <table width="540" border="0" cellspacing="0" cellpadding="20" align="center">
   <tr> 
     <td class="wr2"> 
-      <p><b>�û�����</b></p>
+      <p><b>用户管理</b></p>
       <blockquote> 
-        <p>ϵͳ�û�������ϵͳ�û��б���Ȩ�޷���<br>
-                                 �ͻ��������ͻ��б����ͻ���Ϣ����ɾ�Ĳ�<br>
-                                 ������Ϣ��������Ϣ�鿴�б�����Ϣ����ɾ�Ĳ�</p>
+        <p>系统用户管理：系统用户列表，权限分配<br>
+                                 客户管理：客户列表，客户信息的增删改查<br>
+                                 个人信息：个人信息查看列表，信息的增删改查</p>
       </blockquote>
-      <p><b>ͼ�����</b></p>
+      <p><b>图书管理</b></p>
       <blockquote> 
-        <p>ͼ����Ϣ������ͼ��Ŀ¼ά����ͼ����Ϣ�б�<br>
-                                ���۹����������鿴�������տ�����������Ƕ�������<br>
-                                ���������鿴��棬���ӿ�棬�������</p>
+        <p>图书信息管理：图书目录维护，图书信息列表<br>
+                                销售管理：订单查看，订单收款，订单发货，非定单发货<br>
+                                库存管理：查看库存，增加库存，冲销库存</p>
       </blockquote>
-      <p><b>��������</b></p>
+      <p><b>交互管理</b></p>
       <blockquote> 
-        <p>��Ŀ������չ̨��� ר����� չ̨ר�� <br>
-		          �鼮�ϼܣ��鼮�ϼܣ�չ̨ר��ά�������ר��ά��<br>
-		          ���۹��������۹���<br>
-		          ȱ��������δ�鵽��Ϣ��ȱ���Ǽ���Ϣ����Чȱ����Ϣ������֪ͨ<br>
-		          �ʼ��б�ϵͳ��SiteEIP/SiteOA���ʵ�ϵͳ<br>
-		          ���ʷ��������ʷ���</p>
+        <p>栏目管理：展台类别 专栏类别 展台专栏 <br>
+		          书籍上架：书籍上架，展台专栏维护，库存专栏维护<br>
+		          评论管理：评论管理<br>
+		          缺货管理：未查到信息，缺货登记信息，有效缺货信息，到货通知<br>
+		          邮件列表系统：SiteEIP/SiteOA的邮电系统<br>
+		          访问分析：访问分析</p>
       </blockquote>
-      <p><b>ϵͳ����</b></p>
+      <p><b>系统设置</b></p>
       <blockquote>
-        <p>�˳�ϵͳ���˳���ϵͳ����ʹ�ñ���û�����������ϣ�������𣩣��ɴ˽������Ӧ�Ĺ��ܹ���ģ��</p>
+        <p>退出系统：退出本系统，可使用别的用户名和密码组合（管理类别），由此进入相对应的功能管理模块</p>
       </blockquote>
     </td>
   </tr>

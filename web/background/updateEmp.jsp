@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>ĞŞ¸ÄÔ±¹¤ĞÅÏ¢</title>
+    <title>ä¿®æ”¹å‘˜å·¥ä¿¡æ¯</title>
 	<style type="text/css">
 		@import '${pageContext.request.contextPath}/background/css/addUpdate.css'
 	</style>
@@ -12,36 +12,36 @@
   <body>
      <form action="${pageContext.request.contextPath}/UpdateEmployeeServlet" method="post">
      	<table align="center">
-     		<caption>ĞŞ¸ÄÔ±¹¤ĞÅÏ¢ </caption>
+     		<caption>ä¿®æ”¹å‘˜å·¥ä¿¡æ¯ </caption>
      		<tr>
-     			<td>Ô±¹¤±àºÅ£º</td>
+     			<td>å‘˜å·¥ç¼–å·ï¼š</td>
      			<td><input type="text" name="empId" value="${requestScope.emp.empId}"
      			readonly></td>
      		</tr>
      		<tr>
-     			<td>Ô±¹¤ĞÕÃû£º</td>
+     			<td>å‘˜å·¥å§“åï¼š</td>
      			<td><input type="text" name="empName" value="${requestScope.emp.empName}"></td>
      		</tr>
      		<tr>
-     			<td>Ô±¹¤ÄêÁä£º</td>
+     			<td>å‘˜å·¥å¹´é¾„ï¼š</td>
      			<td><input type="text" name="empAge" value="${requestScope.emp.empAge}"></td>
      		</tr>
      		<tr>
-     			<td>Ô±¹¤ÉúÈÕ£º</td>
+     			<td>å‘˜å·¥ç”Ÿæ—¥ï¼š</td>
      			<td><input type="text" name="empBtd" value="${requestScope.emp.empBtd}"></td>
      		</tr>
      		<tr>
-     			<td>Ô±¹¤ĞÔ±ğ£º</td>
+     			<td>å‘˜å·¥æ€§åˆ«ï¼š</td>
      			<td><input type="radio" name="empSex" value="1" 
      					<c:if test="${requestScope.emp.empSex == 1}">
      						checked
      					</c:if>
-     				>ÄĞ
+     				>ç”·
      				<input type="radio" name="empSex" value="0"
 	     				<c:if test="${requestScope.emp.empSex == 0}">
 	     					checked
 	     				</c:if>
-     				>Å®
+     				>å¥³
      			</td>
      		</tr>
      		<tr>

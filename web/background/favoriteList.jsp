@@ -1,6 +1,6 @@
 <%@page import="com.bookstore.bean.Favorite"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -16,15 +16,15 @@
 	 %>
 	 <script type="text/javascript">
 	 	function isDelete(favId) {
-	 		return confirm("ÄúÒªÉ¾³ı "+ favId +" Âğ£¿");
+	 		return confirm("æ‚¨è¦åˆ é™¤ "+ favId +" å—ï¼Ÿ");
 	 	}
 	 	function gotoNowPage(nowPage) {
     		if(isNaN(nowPage)) {
-    			alert("ÇëÊäÈëÕûĞÍÊıÖµ£¡");
+    			alert("è¯·è¾“å…¥æ•´å‹æ•°å€¼ï¼");
     			return;
     		}
     		if(nowPage <= 0 || nowPage > <%=pageCount%>) {
-    			alert("ÇëÊäÈëÒ³Âë·¶Î§ÄÚµÄÊıÖµ£¡");
+    			alert("è¯·è¾“å…¥é¡µç èŒƒå›´å†…çš„æ•°å€¼ï¼");
     			return;
     		}
     		location = "<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage="+nowPage;
@@ -34,15 +34,15 @@
   
   <body>
     <table border="1">
-    	<caption>ÊÕ²Ø¼ĞĞÅÏ¢ÁĞ±í</caption>
+    	<caption>æ”¶è—å¤¹ä¿¡æ¯åˆ—è¡¨</caption>
     	<tr>
-    		<th>ÊÕ²Ø¼Ğ±àºÅ</th>
-    		<th>Í¼Êé±àºÅ</th>
-    		<th>ÓÃ»§±àºÅ</th>
-    		<th>ÊÕ²ØÊ±¼ä</th>
-    		<th>±¸×¢</th>
-    		<th>ĞŞ¸Ä</th>
-    		<th>É¾³ı</th>
+    		<th>æ”¶è—å¤¹ç¼–å·</th>
+    		<th>å›¾ä¹¦ç¼–å·</th>
+    		<th>ç”¨æˆ·ç¼–å·</th>
+    		<th>æ”¶è—æ—¶é—´</th>
+    		<th>å¤‡æ³¨</th>
+    		<th>ä¿®æ”¹</th>
+    		<th>åˆ é™¤</th>
     	</tr>
     	<%for(Favorite favorite : favorites) { %>
     		<tr>
@@ -58,27 +58,27 @@
     	<%} %>
     	<tr>
     		<td colspan="7">
-    			<a href="<%=request.getContextPath()%>/background/saveFav.jsp">Ôö¼Ó</a>
-    			¹²<%=pageCount%>Ò³
-    			µÚ<%=nowPage%>Ò³
+    			<a href="<%=request.getContextPath()%>/background/saveFav.jsp">å¢åŠ </a>
+    			å…±<%=pageCount%>é¡µ
+    			ç¬¬<%=nowPage%>é¡µ
     			<%if(nowPage == 1) { %>
-    				µÚÒ»Ò³ ÉÏÒ»Ò³
+    				ç¬¬ä¸€é¡µ ä¸Šä¸€é¡µ
     			<%} else { %>
-    				<a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=1">µÚÒ»Ò³</a>
-    				<a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=<%=nowPage-1%>">ÉÏÒ»Ò³</a>
+    				<a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=1">ç¬¬ä¸€é¡µ</a>
+    				<a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=<%=nowPage-1%>">ä¸Šä¸€é¡µ</a>
     			<%} %>
     			<%if(nowPage == pageCount) { %>
-    				ÏÂÒ»Ò³ ×îºóÒ³
+    				ä¸‹ä¸€é¡µ æœ€åé¡µ
     			<%} else { %>
-    				<a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=<%=nowPage+1%>">ÏÂÒ»Ò³</a>
-    				<a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=<%=pageCount%>">×îºóÒ³</a>
+    				<a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=<%=nowPage+1%>">ä¸‹ä¸€é¡µ</a>
+    				<a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=<%=pageCount%>">æœ€åé¡µ</a>
     			<%} %>
     			<select onchange="gotoNowPage(this.value)">
     				<%for(int i = 1; i <= pageCount; i++) { %>
-    					<option value="<%=i%>" <%if(nowPage==i) {out.print("selected");}%>>µÚ<%=i%>Ò³</option>
+    					<option value="<%=i%>" <%if(nowPage==i) {out.print("selected");}%>>ç¬¬<%=i%>é¡µ</option>
     				<%} %>
     			</select>
-    			µÚ<input size="2" value="<%=nowPage%>" onchange="gotoNowPage(this.value)">Ò³
+    			ç¬¬<input size="2" value="<%=nowPage%>" onchange="gotoNowPage(this.value)">é¡µ
     		</td>
     	</tr>
     </table>

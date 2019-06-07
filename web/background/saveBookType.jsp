@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>ÐÂÔöÍ¼ÊéÀà±ð</title>
+    <title>æ–°å¢žå›¾ä¹¦ç±»åˆ«</title>
     <style type="text/css">
     	@import '<%=request.getContextPath()%>/background/css/addUpdate.css';
     </style>
@@ -12,21 +12,21 @@
   <body>
   	<form action="<%=request.getContextPath()%>/SaveBookTypeServlet" method="post">
   		<table align="center">
-  			<caption>ÐÂÔöÍ¼ÊéÀà±ð</caption>
+  			<caption>æ–°å¢žå›¾ä¹¦ç±»åˆ«</caption>
   			<tr>
-  				<td>ÐÂÔö¸¸±àºÅ£º</td>
+  				<td>æ–°å¢žçˆ¶ç¼–å·ï¼š</td>
 				<td><input type="text" name="parentId"></td>
   			</tr>
   			<tr>
-  				<td>ÐÂÔöÍ¼ÊéÀà±ðÃû³Æ£º</td>
+  				<td>æ–°å¢žå›¾ä¹¦ç±»åˆ«åç§°ï¼š</td>
   				<td><input type="text" name="bookTypeName"></td>
   			</tr>
   			<tr>
-  				<td>ÐÂÔö±¸×¢£º</td>
+  				<td>æ–°å¢žå¤‡æ³¨ï¼š</td>
   				<td><input type="text" name="context"></td>
   			</tr>
   			<tr>
-  				<td>ÊÇ·ñ¿ÉÓÃ£º</td>
+  				<td>æ˜¯å¦å¯ç”¨ï¼š</td>
   				<td><input type="text" name="isDelete"></td>
   			</tr>
   			<tr>

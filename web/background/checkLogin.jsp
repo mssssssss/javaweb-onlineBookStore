@@ -1,5 +1,5 @@
-<%--¹ÜÀíÔ±Éí·ÝÑéÖ¤½çÃæ--%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%--ç®¡ç†å‘˜èº«ä»½éªŒè¯ç•Œé¢--%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%
 	if(session.getAttribute("sysAdmin") == null) {
 		response.sendRedirect("login.jsp");

@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>ĞŞ¸Ä¹ÜÀíÔ±ĞÅÏ¢</title>
+    <title>ä¿®æ”¹ç®¡ç†å‘˜ä¿¡æ¯</title>
 	<style type="text/css">
     	@import '${pageContext.request.contextPath}/background/css/addUpdate.css';
     </style>
@@ -12,21 +12,21 @@
   <body>
   	<form action="${pageContext.request.contextPath}/UpdateAdminServlet" method="post">
   		<table align="center">
-  			<caption>ĞŞ¸Ä¹ÜÀíÔ±ĞÅÏ¢</caption>
+  			<caption>ä¿®æ”¹ç®¡ç†å‘˜ä¿¡æ¯</caption>
   			<tr>
-  				<td>¹ÜÀíÔ±±àºÅ£º</td>
+  				<td>ç®¡ç†å‘˜ç¼–å·ï¼š</td>
   				<td><input type="text" name="adminId" value="${requestScope.admin.adminId}" readonly></td>
   			</tr>
   			<tr>
-  				<td>¹ÜÀíÔ±ĞÕÃû£º</td>
+  				<td>ç®¡ç†å‘˜å§“åï¼š</td>
   				<td><input type="text" name="adminName" value="${requestScope.admin.adminName}"></td>
   			</tr>
   			<tr>
-  				<td>¹ÜÀíÔ±ÃÜÂë£º</td>
+  				<td>ç®¡ç†å‘˜å¯†ç ï¼š</td>
   				<td><input type="text" name="pwd" value="${requestScope.admin.pwd}"></td>
   			</tr>
   			<tr>
-  				<td>¹ÜÀíÔ±Àà±ğ£º</td>
+  				<td>ç®¡ç†å‘˜ç±»åˆ«ï¼š</td>
   				<td><input type="text" name="adminType" value="${requestScope.admin.adminType}"></td>
   			</tr>
   			<tr>

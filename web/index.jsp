@@ -1,5 +1,5 @@
-<%--�����ҳ--%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%--书城主页--%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@page import="java.util.List"%>
 <%@page import="com.bookstore.bean.BookInfo"%>
 <%@page import="com.bookstore.bean.News"%>
@@ -14,9 +14,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>�����</title>
-<meta name="keywords" content="�ؼ���" />
-<meta name="description" content="ҳ������" />
+<title>云起点</title>
+<meta name="keywords" content="关键字" />
+<meta name="description" content="页面描述" />
 <link rel="stylesheet" href="style/public.css" type="text/css" />
 <link rel="stylesheet" href="style/index.css" type="text/css" />
 <script src="js/banner.js" type="text/javascript"></script>
@@ -37,14 +37,14 @@
 	<div class="top1_1">
         <c:choose >
             <c:when test="${sessionScope.customerInfo.custName!=null}">
-                ��ǰ�û�����:<b>${sessionScope.customerInfo.custName}</b> ��ӭ���ʱ��̳ǣ�&nbsp;&nbsp;&nbsp;
+                当前用户身份:<b>${sessionScope.customerInfo.custName}</b> 欢迎访问本商城！&nbsp;&nbsp;&nbsp;
             </c:when>
             <c:otherwise>
-                ��ǰ�û�����:�ο� ��¼�󷽿��µ�&nbsp;&nbsp;&nbsp;
+                当前用户身份:游客 登录后方可下单&nbsp;&nbsp;&nbsp;
             </c:otherwise>
         </c:choose>
-   	<a  href="${pageContext.request.contextPath}/qtLogin.jsp">�û���¼</a>
-   	<a  href="${pageContext.request.contextPath}/background/index.jsp">����Ա��½</a>
+   	<a  href="${pageContext.request.contextPath}/qtLogin.jsp">用户登录</a>
+   	<a  href="${pageContext.request.contextPath}/background/index.jsp">管理员登陆</a>
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">
@@ -54,19 +54,19 @@
             	<li>
 	            	<a href="<%=request.getContextPath() %>/gouwuche.jsp">
                         <%--<a href="#">--%>
-	            	<img src="images/car.jpg"/><br />���ﳵ</a>
+	            	<img src="images/car.jpg"/><br />购物车</a>
             	</li>
-				<li><a href="#"><img src="images/car.jpg"/><br />������ѯ</a></li>
-				<li><a href="#"><img src="images/car.jpg"/><br />�ҵĻ���</a></li>
-				<li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />������վ</a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />订单查询</a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />我的积分</a></li>
+				<li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />关联网站</a></li>
             </ul>
             <ul class="menu">
-                    <li><a href="<%=request.getContextPath() %>/InitIndexServlet">��ҳ</a></li>
-                    <li><a href="#">С˵</a></li>
-                    <li><a href="#">����</a></li>
-                <li><a href="#">����</a></li>
-                <li><a href="help.jsp">����</a></li>
-                <li><a href="about.jsp">����</a></li>
+                    <li><a href="<%=request.getContextPath() %>/InitIndexServlet">首页</a></li>
+                    <li><a href="#">小说</a></li>
+                    <li><a href="#">文艺</a></li>
+                <li><a href="#">传记</a></li>
+                <li><a href="help.jsp">帮助</a></li>
+                <li><a href="about.jsp">关于</a></li>
             </ul>
         </div>
 	</div>
@@ -76,14 +76,14 @@
 	<div class="middle_left">
   		<div class="middle_left1">
         	<div class="middle_left1title">
-            	������Ʒ����
+            	所有商品分类
             </div>
             <div class="middle_left1con">
         		<%@include file="leftBookType.jsp"%>
         	</div>
         </div>
         <div class="middle_left3">
-        	<h3 class="paihtit">��������</h3>
+        	<h3 class="paihtit">最新排行</h3>
         	<%for(int i = 0; i < rxbooks.size(); i++){ 
         		BookInfo bookInfo = new BookInfo();
         		bookInfo = rxbooks.get(i);
@@ -114,7 +114,7 @@
 <TABLE id="idSlider2" border="0" cellspacing="0" cellpadding="0">
   <TBODY>
   <TR>
-      <%--�ֲ�ͼƬ--%>
+      <%--轮播图片--%>
     <TD class="td_f"><A href="#"><IMG src="images/01.jpg"/></A></TD>
 	<TD class="td_f"><A href="#"><IMG src="images/02.jpg"/></A></TD>
 	<TD class="td_f"><A href="#"><IMG src="images/03.jpg"/></A></TD>
@@ -135,7 +135,7 @@
 	var st = new SlideTrans("idContainer2", "idSlider2", 5, { Vertical: false });
 	
 	var nums = [];
-	//��������
+	//插入数字
 	for(var i = 0, n = st._count - 1; i <= n;){
 		(nums[i] = $("idNum").appendChild(document.createElement("li"))).innerHTML = ++i;
 	}
@@ -145,14 +145,14 @@
 		o.onmouseout = function(){ o.className = ""; st.Auto = true; st.Run(); };
 	});
 	
-	//���ð�ť��ʽ
+	//设置按钮样式
 	st.onStart = function(){
 		forEach(nums, function(o, i){ o.className = st.Index == i ? "on" : ""; });
 	};
 	st.Run();
 </SCRIPT>
             </div>
-        <%--��Ѷ���ŵ�չʾ--%>
+        <%--资讯新闻的展示--%>
          	<div class="middle_right1R">
             	<div class="middle_right1Rtitle"> </div>
                 <div class="middle_right1Rcon">
@@ -161,7 +161,7 @@
                 		News news = new News();
                 		news = newsList.get(i);
                 		%>
-                    	<li><a style="font-family:����" href="<%=request.getContextPath() %>/ShowNewsServlet?id=<%=news.getNewsId() %>"><%=news.getNewTitle() %></a></li>
+                    	<li><a style="font-family:隶书" href="<%=request.getContextPath() %>/ShowNewsServlet?id=<%=news.getNewsId() %>"><%=news.getNewTitle() %></a></li>
                     	<%} %>
    				   </ul>
             </div>
@@ -170,7 +170,7 @@
             <%--</div>--%>
         </div>
         <div class="middle_right2">
-            	<div class="middle_right2Rtitle">������Ʒ <i>New book</i></div>
+            	<div class="middle_right2Rtitle">最新商品 <i>New book</i></div>
                 <div class="middle_right2Rcon">
 					<ul>
 						<%for(int i = 0; i < sjbooks.size(); i++) { 
@@ -180,8 +180,8 @@
                         <li><a href="<%=request.getContextPath() %>/ShowBookInfoServlet?id=<%=bookInfo.getBookId() %>">
                         <img src="imgsx/<%=bookInfo.getSmallImg() %>" width="95" height = "180"/><br /><%=bookInfo.getBookName() %></a>
                         <br />
-                        <span class="borline">�г��ۣ���<%=bookInfo.getPrice() %></span>
-                        <br /><span>�̳Ǽۣ���<%=bookInfo.getHyprice() %></span>
+                        <span class="borline">市场价：￥<%=bookInfo.getPrice() %></span>
+                        <br /><span>商城价：￥<%=bookInfo.getHyprice() %></span>
                         <a href="<%=request.getContextPath() %>/ShowBookInfoServlet?id=<%=bookInfo.getBookId() %>">
                         <img src="<%=request.getContextPath()%>/images/btn3.gif" 
                         		width="90" height="25"/></a></li>
@@ -190,7 +190,7 @@
             </div>           
         </div>
          <div class="middle_right2">
-            	<div class="middle_right2Rtitle title2">������Ʒ  <i>hot book</i></div>
+            	<div class="middle_right2Rtitle title2">热销商品  <i>hot book</i></div>
                 <div class="middle_right2Rcon">
 					<ul>
 						<%for(int i = 0; i < rxbooks.size(); i++) { 
@@ -200,8 +200,8 @@
                         <li><a href="<%=request.getContextPath() %>/ShowBookInfoServlet?id=<%=bookInfo.getBookId() %>">
                         <img src="imgsx/<%=bookInfo.getSmallImg() %>" width="95" height = "180"/><br /><%=bookInfo.getBookName() %></a>
                         <br />
-                        <span class="borline">�г��ۣ���<%=bookInfo.getPrice() %></span>
-                        <br /><span>�̳Ǽۣ���<%=bookInfo.getHyprice() %></span>
+                        <span class="borline">市场价：￥<%=bookInfo.getPrice() %></span>
+                        <br /><span>商城价：￥<%=bookInfo.getHyprice() %></span>
                         <a href="<%=request.getContextPath() %>/ShowBookInfoServlet?id=<%=bookInfo.getBookId() %>">
                         <img src="<%=request.getContextPath()%>/images/btn3.gif" 
                         		width="90" height="25"/></a></li>
@@ -220,8 +220,8 @@
                         <li><a href="<%=request.getContextPath() %>/ShowBookInfoServlet?id=<%=bookInfo.getBookId() %>">
                         <img src="imgsx/<%=bookInfo.getSmallImg() %>" width="95" height = "180"/><br /><%=bookInfo.getBookName() %></a>
                         <br />
-                        <span class="borline">�г��ۣ���<%=bookInfo.getPrice() %></span>
-                        <br /><span>�̳Ǽۣ���<%=bookInfo.getHyprice() %></span>
+                        <span class="borline">市场价：￥<%=bookInfo.getPrice() %></span>
+                        <br /><span>商城价：￥<%=bookInfo.getHyprice() %></span>
                         <a href="<%=request.getContextPath() %>/ShowBookInfoServlet?id=<%=bookInfo.getBookId() %>">
                         <img src="<%=request.getContextPath()%>/images/btn3.gif" 
                         		width="90" height="25"/></a></li>
@@ -235,36 +235,36 @@
 <!-- footer -->
 <div class="footer">
 	<ul class="lbox">
-    	<li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">����ָ��</li>
-        <li><a href="#">��������</a></li>
-        <li><a href="#">��Ʊ�ƶ�</a></li>
-        <li><a href="#">����Э��</a></li>
-        <li><a href="#">��Ա�Ż�</a></li>
-        <li><a href="#">��Ա����</a></li>
+    	<li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">购物指南</li>
+        <li><a href="#">购物流程</a></li>
+        <li><a href="#">发票制度</a></li>
+        <li><a href="#">服务协议</a></li>
+        <li><a href="#">会员优惠</a></li>
+        <li><a href="#">会员积分</a></li>
     </ul>
     <ul class="lbox">
-        <li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">֧����ʽ</li>
-        <li><a href="#">��������</a></li>
-        <li><a href="#">����֧��</a></li>
-        <li><a href="#">��Ʒ��֧��</a></li>
-        <li><a href="#">����ת��</a></li>
-        <li><a href="#">���Ѵ���</a></li>
+        <li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">支付方式</li>
+        <li><a href="#">货到付款</a></li>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">礼品卡支付</a></li>
+        <li><a href="#">银行转账</a></li>
+        <li><a href="#">朋友代付</a></li>
     </ul>
    	<ul class="lbox">
-        <li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">��������</li>
-        <li><a href="#">���ͷ����ѯ</a></li>
-        <li><a href="#">����״̬˵��</a></li>
-        <li><a href="#">�����쳣˵��</a></li>
-        <li><a href="#">�����޸Ķ���</a></li>
-        <li><a href="#">����ȡ������</a></li>
+        <li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">订单服务</li>
+        <li><a href="#">配送服务查询</a></li>
+        <li><a href="#">订单状态说明</a></li>
+        <li><a href="#">订单异常说明</a></li>
+        <li><a href="#">自助修改订单</a></li>
+        <li><a href="#">自助取消订单</a></li>
     </ul>
    	<ul class="lbox nolbox">
-        <li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">���ͷ�ʽ</li>
-        <li><a href="#">���յ�</a></li>
-        <li><a href="#">���մ�</a></li>
-        <li><a href="#">��������</a></li>
-        <li><a href="#">�����ǩ��</a></li>
-        <li><a href="#">���Ѵ�ǩ</a></li>
+        <li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">配送方式</li>
+        <li><a href="#">当日递</a></li>
+        <li><a href="#">次日达</a></li>
+        <li><a href="#">订单自提</a></li>
+        <li><a href="#">验货与签收</a></li>
+        <li><a href="#">朋友代签</a></li>
     </ul>
 </div>
 <!-- footer1 -->
@@ -278,8 +278,8 @@
 </div>
 <!-- footer2 -->
 <div class="footer2">
-    Copyright (C) ����� 2009-2019, All Rights Reserved<br />
-    ������Υ���Ͳ�����Ϣ�ٱ��绰��4001066666-5 ���䣺simaqinsheng@gmail.com
+    Copyright (C) 云起点 2009-2019, All Rights Reserved<br />
+    互联网违法和不良信息举报电话：4001066666-5 邮箱：simaqinsheng@gmail.com
 </div>
 
 <script>
@@ -300,7 +300,7 @@
             clearInterval(anim);
             switch (++click_cnt) {
                 case 10:
-                    $elem.innerText = "O��O";
+                    $elem.innerText = "OωO";
                     break;
                 case 20:
                     $elem.innerText = "(??? ? ???)";
@@ -312,19 +312,19 @@
                     $elem.innerText = "(???_???)";
                     break;
                 case 50:
-                    $elem.innerText = "�����أ���";
+                    $elem.innerText = "（￣へ￣）";
                     break;
                 case 60:
-                    $elem.innerText = "(�s��ڡ�)�s(�ء���";
+                    $elem.innerText = "(╯°口°)╯(┴—┴";
                     break;
                 case 70:
-                    $elem.innerText = "?( ??��?? )?";
+                    $elem.innerText = "?( ??皿?? )?";
                     break;
                 case 80:
-                    $elem.innerText = "�r(?>��<?)�q";
+                    $elem.innerText = "╮(?>口<?)╭";
                     break;
                 case 90:
-                    $elem.innerText = "( ? ??��??)?????";
+                    $elem.innerText = "( ? ??皿??)?????";
                     break;
                 case 100:
                 case 101:
@@ -332,11 +332,11 @@
                 case 103:
                 case 104:
                 case 105:
-                    $elem.innerText = "(?��?�ա�?)";
+                    $elem.innerText = "(?°?д°?)";
                     break;
                 default:
                     // $elem.innerText = "?";
-                    $elem.innerText = "O��O";
+                    $elem.innerText = "OωO";
                     break;
             }
             $elem.style.fontSize = Math.random() * 10 + 8 + "px";

@@ -1,5 +1,5 @@
-<%--ÐÂÎÅµÄ¾ßÌåÏÔÊ¾ÐÅÏ¢--%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%--æ–°é—»çš„å…·ä½“æ˜¾ç¤ºä¿¡æ¯--%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@page import="com.bookstore.bean.BookInfo"%>
 <%@page import="java.util.List"%>
 <%@page import="com.bookstore.bean.BookDiscuss"%>
@@ -9,9 +9,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>ÔÆÆðµã</title>
-<meta name="keywords" content="¹Ø¼ü×Ö" />
-<meta name="description" content="Ò³ÃæÃèÊö" />
+<title>äº‘èµ·ç‚¹</title>
+<meta name="keywords" content="å…³é”®å­—" />
+<meta name="description" content="é¡µé¢æè¿°" />
 <link rel="stylesheet" href="style/public.css" type="text/css" />
 <link rel="stylesheet" href="style/index.css" type="text/css" />
 <script src="js/banner.js" type="text/javascript"></script>
@@ -29,37 +29,37 @@
 	<div class="top1_1">
 		<c:choose >
 			<c:when test="${sessionScope.customerInfo.custName!=null}">
-				µ±Ç°ÓÃ»§Éí·Ý:<b>${sessionScope.customerInfo.custName}</b> »¶Ó­·ÃÎÊ±¾ÉÌ³Ç£¡&nbsp;&nbsp;&nbsp;
+				å½“å‰ç”¨æˆ·èº«ä»½:<b>${sessionScope.customerInfo.custName}</b> æ¬¢è¿Žè®¿é—®æœ¬å•†åŸŽï¼&nbsp;&nbsp;&nbsp;
 			</c:when>
 			<c:otherwise>
-				µ±Ç°ÓÃ»§Éí·Ý:ÓÎ¿Í µÇÂ¼ºó·½¿ÉÏÂµ¥&nbsp;&nbsp;&nbsp;
+				å½“å‰ç”¨æˆ·èº«ä»½:æ¸¸å®¢ ç™»å½•åŽæ–¹å¯ä¸‹å•&nbsp;&nbsp;&nbsp;
 			</c:otherwise>
 		</c:choose>
-   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">ÓÃ»§µÇÂ¼</a>
-   	<a href="${pageContext.request.contextPath}/background/index.jsp">¹ÜÀíÔ±µÇÂ½</a>
+   	<a href="${pageContext.request.contextPath}/qtLogin.jsp">ç”¨æˆ·ç™»å½•</a>
+   	<a href="${pageContext.request.contextPath}/background/index.jsp">ç®¡ç†å‘˜ç™»é™†</a>
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">
             <ul class="yudingCon">
-                <%--<li>ÊéÃû:<input type="text" name="" class="kuang" />  </li>--%>
-            	<%--<li>×÷Õß:<input type="text" name="" class="kuang" />  </li>--%>
+                <%--<li>ä¹¦å:<input type="text" name="" class="kuang" />  </li>--%>
+            	<%--<li>ä½œè€…:<input type="text" name="" class="kuang" />  </li>--%>
             	<%--<li class="ribtn"><input type="image" src="images/btn.gif" class="btn"/></li>--%>
 		</ul>
         </div>
 		<div class="top1_2_r">
         	<ul class="other">
-            	<li><a href="<%=request.getContextPath() %>/gouwuche.jsp"><img src="images/car.jpg"/><br />¹ºÎï³µ</a></li>
-				<li><a href="#"><img src="images/car.jpg"/><br />¶©µ¥²éÑ¯  </a></li>
-				<li><a href="#"><img src="images/car.jpg"/><br />ÎÒµÄ»ý·Ö</a></li>
-				<li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />¹ØÁªÍøÕ¾</a></li>
+            	<li><a href="<%=request.getContextPath() %>/gouwuche.jsp"><img src="images/car.jpg"/><br />è´­ç‰©è½¦</a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />è®¢å•æŸ¥è¯¢  </a></li>
+				<li><a href="#"><img src="images/car.jpg"/><br />æˆ‘çš„ç§¯åˆ†</a></li>
+				<li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />å…³è”ç½‘ç«™</a></li>
 			</ul>
             <ul class="menu">
-				<li><a href="<%=request.getContextPath() %>/InitIndexServlet">Ê×Ò³</a></li>
-				<li><a href="#">Ð¡Ëµ</a></li>
-				<li><a href="#">ÎÄÒÕ</a></li>
-				<li><a href="#">´«¼Ç</a></li>
-				<li><a href="help.jsp">°ïÖú</a></li>
-				<li><a href="about.jsp">¹ØÓÚ</a></li>
+				<li><a href="<%=request.getContextPath() %>/InitIndexServlet">é¦–é¡µ</a></li>
+				<li><a href="#">å°è¯´</a></li>
+				<li><a href="#">æ–‡è‰º</a></li>
+				<li><a href="#">ä¼ è®°</a></li>
+				<li><a href="help.jsp">å¸®åŠ©</a></li>
+				<li><a href="about.jsp">å…³äºŽ</a></li>
             </ul>
         </div>
 	</div>
@@ -69,7 +69,7 @@
 	<div class="middle_left">
   		<div class="middle_left1">
         	<div class="middle_left1title">
-            	ËùÓÐÉÌÆ··ÖÀà
+            	æ‰€æœ‰å•†å“åˆ†ç±»
             </div>
             <div class="middle_left1con">
 				<%@ include file = "leftBookType.jsp" %>                
@@ -81,33 +81,33 @@
     </div>
     <div class="middle_right">
     	<div class="middle_right6tit">
-        	Äúµ±Ç°µÄÎ»ÖÃ£ºÍøÕ¾Ê×Ò³ ---- ÐÂÎÅÐÅÏ¢  
+        	æ‚¨å½“å‰çš„ä½ç½®ï¼šç½‘ç«™é¦–é¡µ ---- æ–°é—»ä¿¡æ¯  
         </div>
         <div class="middle8">
         	<div class="middle8tit">
-            	<a href="#"><span>ÐÂÎÅÐÅÏ¢</span></a>
+            	<a href="#"><span>æ–°é—»ä¿¡æ¯</span></a>
             </div>
         <div class="middle8con" >             
 		<%=news.getContext() %>
-		<p>·¢²¼Ê±¼ä£º <%=news.getCreateTime() %> </p>
+		<p>å‘å¸ƒæ—¶é—´ï¼š <%=news.getCreateTime() %> </p>
         </div>
          <div class="middle9">
-        	<div class="middle9tit">ÍøÓÑÆÀÂÛ:</div>
+        	<div class="middle9tit">ç½‘å‹è¯„è®º:</div>
         		
         	</div>
         </div> 
         <%--<div class="middle9">--%>
-        	<%--<div class="middle9tit">ÓÃ»§ÆÀÂÛ</div>--%>
+        	<%--<div class="middle9tit">ç”¨æˆ·è¯„è®º</div>--%>
             <%--<div class="middle_right9con">--%>
-            	<%--<div>ÓÃ»§Ãû£ºÄäÃûÓÃ»§</div>--%>
+            	<%--<div>ç”¨æˆ·åï¼šåŒ¿åç”¨æˆ·</div>--%>
                 <%--<div>E-mail:<input type="text" name="text" size="25" /></div>--%>
-            	<%--<div>ÆÀÂÛµÈ¼¶£º<input name="" type="radio" value="" /><img src="images/pl1.gif"/> --%>
+            	<%--<div>è¯„è®ºç­‰çº§ï¼š<input name="" type="radio" value="" /><img src="images/pl1.gif"/> --%>
             	<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/> --%>
             	<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/> --%>
             	<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/> --%>
             	<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/></div>--%>
-            	<%--<div>ÆÀÂÛÄÚÈÝ£º<textarea name="" cols="" rows=""></textarea></div>--%>
-                <%--<div>ÑéÖ¤Âë£º<input type="text"  size="15" /><img src="images/yz.gif"/></div>--%>
+            	<%--<div>è¯„è®ºå†…å®¹ï¼š<textarea name="" cols="" rows=""></textarea></div>--%>
+                <%--<div>éªŒè¯ç ï¼š<input type="text"  size="15" /><img src="images/yz.gif"/></div>--%>
                 <%--<div><input type="button"  class="btn4" value=" " /></div>--%>
             <%--</div>--%>
             <%--</div>        --%>
@@ -117,11 +117,11 @@
 <!-- footer2 -->
 <div class="footer3">
 	<div class="footer3_in">
-	<a href="#">¹«Ë¾¼ò½é</a><span>|</span><a href="#">ÃâÔðÌõ¿î</a><span>|</span><a href="#">ÒþË½±£»¤</a><span>|</span><a href="#">×ÉÑ¯ÈÈµã</a><span>|</span><a href="#">ºÏ×÷ÕÐÄ¼</a><span>|</span><a href="#">ÅäËÍ·½Ê½</a><span>|</span><a href="#">ÁªÏµÎÒÃÇ</a>
+	<a href="#">å…¬å¸ç®€ä»‹</a><span>|</span><a href="#">å…è´£æ¡æ¬¾</a><span>|</span><a href="#">éšç§ä¿æŠ¤</a><span>|</span><a href="#">å’¨è¯¢çƒ­ç‚¹</a><span>|</span><a href="#">åˆä½œæ‹›å‹Ÿ</a><span>|</span><a href="#">é…é€æ–¹å¼</a><span>|</span><a href="#">è”ç³»æˆ‘ä»¬</a>
     </div>
     <div class="footer2">
-		Copyright (C) ÔÆÆðµã 2009-2019, All Rights Reserved<br />
-		»¥ÁªÍøÎ¥·¨ºÍ²»Á¼ÐÅÏ¢¾Ù±¨µç»°£º4001066666-5 ÓÊÏä£ºservice@cs.yunqidian.com
+		Copyright (C) äº‘èµ·ç‚¹ 2009-2019, All Rights Reserved<br />
+		äº’è”ç½‘è¿æ³•å’Œä¸è‰¯ä¿¡æ¯ä¸¾æŠ¥ç”µè¯ï¼š4001066666-5 é‚®ç®±ï¼šservice@cs.yunqidian.com
     </div>
 </div>
 </body>

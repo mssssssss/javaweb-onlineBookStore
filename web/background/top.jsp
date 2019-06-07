@@ -1,5 +1,5 @@
-<%--管理员管理界面的头部--%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%--绠＄悊鍛樼鐞嗙晫闈㈢殑澶撮儴--%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
@@ -7,12 +7,12 @@
 
 /*.wr{font-size: 12pt; line-height: 22px}*/
 /*.wr1 {	FONT-SIZE: 12px; LINE-HEIGHT: 200%}*/
-.wr2 {	font-size: 18px; line-height: 180%; font-family: '楷体_GB2312'}
+.wr2 {	font-size: 18px; line-height: 180%; font-family: '妤蜂綋_GB2312'}
 /*.wr3 {	FONT-SIZE: 12px}*/
 /*.wr4 {	FONT-SIZE: 12px; LINE-HEIGHT: 150%}*/
 
 </style>
-<title>网上图书商城后台管理系统</title>
+<title>缃戜笂鍥句功鍟嗗煄鍚庡彴绠＄悊绯荤粺</title>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 </head>
 
@@ -23,13 +23,13 @@
     <td width="50">&nbsp;</td>
     <td><img src="${pageContext.request.contextPath}/background/images/ht01.jpg" width="65" height="65"></td>
     <td width="50">&nbsp;</td>
-    <td><img src="${pageContext.request.contextPath}/background/images/ht02.jpg" width="320" height="34" alt="云工厂网上书店后台管理系统"></td>
+    <td><img src="${pageContext.request.contextPath}/background/images/ht02.jpg" width="320" height="34" alt="浜戝伐鍘傜綉涓婁功搴楀悗鍙扮鐞嗙郴缁�"></td>
   </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ff4500">
     <tr>
     <td class="wr2">
-      <div align="center">网上图书商城后台管理系统</div>
+      <div align="center">缃戜笂鍥句功鍟嗗煄鍚庡彴绠＄悊绯荤粺</div>
     </td>
   </tr>
 </table>

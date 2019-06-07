@@ -1,11 +1,11 @@
 <%@page import="com.bookstore.bean.BookDiscuss"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>ͼ�������б�</title>
+    <title>图书评价列表</title>
     <style type="text/css">
 		@import '<%=request.getContextPath()%>/background/css/body.css';
 	</style>
@@ -16,16 +16,16 @@
      %>
   	<script type="text/javascript">
      	function isDelete(disId) {
-    		return confirm("��Ҫɾ��[" + disId + "]��");
+    		return confirm("您要删除[" + disId + "]吗？");
     	}
     	
     	function gotoNowPage(nowPage) {
     		if(isNaN(nowPage)) {
-    			alert("������������ֵ��");
+    			alert("请输入整型数值！");
     			return;
     		}
     		if(nowPage <= 0 || nowPage > <%=pageCount%>) {
-    			alert("������ҳ�뷶Χ�ڵ���ֵ��");
+    			alert("请输入页码范围内的数值！");
     			return;
     		}
     		
@@ -35,15 +35,15 @@
      </head>
   <body>
     <table border = "1">
-  		<caption>ͼ�����۱�</caption>
+  		<caption>图书评论表</caption>
   		<tr>
-  			<th>�������</th>
-  			<th>ͼ����</th>
-  			<th>�û����</th>
-  			<th>��������</th>
-  			<th>����״̬</th>
-  			<th>�޸�</th>
-  			<th>ɾ��</th>
+  			<th>书评编号</th>
+  			<th>图书编号</th>
+  			<th>用户编号</th>
+  			<th>书评内容</th>
+  			<th>书评状态</th>
+  			<th>修改</th>
+  			<th>删除</th>
   		</tr>
   		<%for(BookDiscuss book : books) { %>
   			<tr>
@@ -59,24 +59,24 @@
   		<%} %>
   		<tr>
   			<td colspan="7">
-  			<a href="<%=request.getContextPath()%>/background/saveBookDiscuss.jsp">����</a>
-  			��<%=pageCount %>ҳ
-  			��<%=nowPage %>ҳ
+  			<a href="<%=request.getContextPath()%>/background/saveBookDiscuss.jsp">新增</a>
+  			共<%=pageCount %>页
+  			第<%=nowPage %>页
   			<%if(nowPage == 1) { %>
-  				��һҳ ��һҳ
+  				上一页 下一页
   			<%} else { %>
   				<a href="<%=request.getContextPath()%>/FindAllBookDiscussServlet
-  						?nowPage=1">��һҳ</a>
+  						?nowPage=1">第一页</a>
   				<a href="<%=request.getContextPath()%>/FindAllBookDiscussServlet
-  						?nowPage=<%=nowPage-1%>">��һҳ</a>
+  						?nowPage=<%=nowPage-1%>">上一页</a>
   			<%} %>
   			<%if(nowPage == pageCount) { %>
-  				��һҳ ���ҳ
+  				下一页 最后页
   			<%} else { %>
   				<a href="<%=request.getContextPath()%>/FindAllBookDiscussServlet
-  						?nowPage=<%=nowPage+1%>">��һҳ</a>
+  						?nowPage=<%=nowPage+1%>">下一页</a>
   				<a href="<%=request.getContextPath()%>/FindAllBookDiscussServlet
-  						?nowPage=<%=pageCount%>">���ҳ</a>
+  						?nowPage=<%=pageCount%>">最后页</a>
   			<%} %>
   			<select onchange="gotoNowPage(this.value)">
   		 		<%for(int i = 1; i <= pageCount; i++) { %>
@@ -84,10 +84,10 @@
   		 				<%if(nowPage == i) {
   		 					out.print("selected");
   		 				} %>
-  		 			>��<%=i%>ҳ</option>
+  		 			>第<%=i%>页</option>
   		 		<%} %>
   		 	</select>
-  		 	��<input size="2" value="<%=nowPage %>" onchange="gotoNowPage(this.value)">ҳ
+  		 	第<input size="2" value="<%=nowPage %>" onchange="gotoNowPage(this.value)">页
   			</td>
   		</tr>
   	</table>

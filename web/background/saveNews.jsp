@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>лМ╪спбне</title>
+    <title>Ф╥╩Е┼═Ф√╟И≈╩</title>
     <style type="text/css">
     	@import '<%=request.getContextPath()%>/background/css/addUpdate.css'
     </style>
@@ -12,21 +12,21 @@
   <body>
   	<form action="<%=request.getContextPath()%>/SaveNewsServlet" method="post">
   		<table align="center">
-  			<caption>пбтЖпбне</caption>
+  			<caption>Ф√╟Е╒·Ф√╟И≈╩</caption>
   			<!-- <tr>
-  				<td>пбне╠Ю╨её╨</td>
+  				<td>Ф√╟И≈╩Г╪√Е▐╥О╪ </td>
   				<td><input type="text" name="newsId"></td>
   			</tr> -->
   			<tr>
-  				<td>пбне╠ЙлБё╨</td>
+  				<td>Ф√╟И≈╩Ф═┤И╒≤О╪ </td>
   				<td><input type="text" name="newTitle"></td>
   			</tr>
   			<tr>
-  				<td>пбне╥╒╡╪дзхщё╨</td>
+  				<td>Ф√╟И≈╩Е▐▒Е╦┐Е├┘Е╝╧О╪ </td>
   				<td><input type="text" name="context"></td>
   			</tr>
   			<tr>
-  				<td>пбне╥╒╡╪й╠╪Дё╨</td>
+  				<td>Ф√╟И≈╩Е▐▒Е╦┐Ф≈╤И≈╢О╪ </td>
   				<td><input type="text" name="createTime"></td>
   			</tr>
   			<tr>

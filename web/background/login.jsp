@@ -1,9 +1,9 @@
-<%--¹ÜÀíÔ±µÇÂ½½çÃæ--%>
-<%@ page language="java" contentType="text/html; charset=GBK"%>
+<%--ç®¡ç†å‘˜ç™»é™†ç•Œé¢--%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html >
 <head>
-<title>µÇÂ½½çÃæ-ÍøÉÏÍ¼ÊéÉÌ³ÇºóÌ¨¹ÜÀíÏµÍ³</title>
+<title>ç™»é™†ç•Œé¢-ç½‘ä¸Šå›¾ä¹¦å•†åŸŽåŽå°ç®¡ç†ç³»ç»Ÿ</title>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <%--<link href="css/bootstrap.css">--%>
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -20,7 +20,7 @@
 			<tr>
 				<td class="wr2">
 					<div align="center"  class="divcss5" style="background-color: #1A7CBC;  font-size:36px;">
-						ÍøÉÏÍ¼ÊéÉÌ³ÇºóÌ¨µÇÂ¼
+						ç½‘ä¸Šå›¾ä¹¦å•†åŸŽåŽå°ç™»å½•
 					</div>
 				</td>
 			</tr>
@@ -32,9 +32,9 @@
 				<%--<tr>--%>
 				<%--<td class="wr2">--%>
 					<%--<div align="center">--%>
-					<%--<font color="blue"><b>ÓÃ»§Ãû</b></font> : <input type="text" name="name"/><br><br>--%>
-					<%--<font color="blue"><b>ÃÜ&nbsp;Âë</b></font>  : <input type="password" name="pwd"/><br><br>--%>
-					<%--<input type="submit" style="width:80px;height:26px;" value="µÇÂ½" /> <br><br>--%>
+					<%--<font color="blue"><b>ç”¨æˆ·å</b></font> : <input type="text" name="name"/><br><br>--%>
+					<%--<font color="blue"><b>å¯†&nbsp;ç </b></font>  : <input type="password" name="pwd"/><br><br>--%>
+					<%--<input type="submit" style="width:80px;height:26px;" value="ç™»é™†" /> <br><br>--%>
 					<%--</div>    --%>
 				<%--</tr>--%>
 		<%--</table>--%>
@@ -45,32 +45,32 @@
 		<form method="post" name="form1"  action="${pageContext.request.contextPath}/BackgroundLoginServlet" >
 				<table style="margin-left: 40px; margin-top: 15px">
 					<tr>
-						<td align="center" style="font-size: 26px; font-family: ËÎÌå">ÓÃ»§Ãû£º</td>
+						<td align="center" style="font-size: 26px; font-family: å®‹ä½“">ç”¨æˆ·åï¼š</td>
 						<td><input type="text" class="form-control" name="name"  value="${param.name }" /></td>
 						<%--onclick="mes.innerHTML=''"--%>
 					</tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr>
-						<td align="center" style="font-size: 26px; font-family: ËÎÌå">ÃÜÂë:</td>
+						<td align="center" style="font-size: 26px; font-family: å®‹ä½“">å¯†ç :</td>
 						<td><input type="password" class="form-control" name="pwd" value="${param.pwd }" /></td>
 					</tr>
 					<tr><td>&nbsp;</td></tr>
 					<%--<tr>--%>
-						<%--<td align="center">ÑéÖ¤Âë:</td>--%>
+						<%--<td align="center">éªŒè¯ç :</td>--%>
 						<%--<td><input type="text" name="checkcode"  class="form-control"/></td>--%>
 						<%--<td>&nbsp;&nbsp;<img border="0" src="/codecheck" height="33px" />&nbsp;&nbsp;--%>
-							<%--<input type="submit" value="»»Ò»ÕÅ" class="btn btn-primary"--%>
+							<%--<input type="submit" value="æ¢ä¸€å¼ " class="btn btn-primary"--%>
 								   <%--onclick="form1.action='/changecheckcode'" /></td>--%>
 					<%--</tr>--%>
 					<tr><td>&nbsp;</td></tr>
 					<tr>
 						<td>&nbsp;</td>
 						<td>
-							<input type="submit" value="µÇÂ¼"  class="btn  btn-lg btn-primary" />
+							<input type="submit" value="ç™»å½•"  class="btn  btn-lg btn-primary" />
 							<%--onclick="form1.action='/login'"--%>
-						<%--<input type="submit" value="µÇÂ¼"  onclick="form1.action='logincheck'"  class="btn btn-primary" />--%>
-							<label style="float: right; "><input type="reset"  value="ÖØÖÃ" class="btn btn-lg btn-primary" /></label>
-							<%--<input type="reset" value="ÖØÖÃ" style="width: 50%" class="btn btn-primary" />--%>
+						<%--<input type="submit" value="ç™»å½•"  onclick="form1.action='logincheck'"  class="btn btn-primary" />--%>
+							<label style="float: right; "><input type="reset"  value="é‡ç½®" class="btn btn-lg btn-primary" /></label>
+							<%--<input type="reset" value="é‡ç½®" style="width: 50%" class="btn btn-primary" />--%>
 						</td>
 					</tr>
 				</table>

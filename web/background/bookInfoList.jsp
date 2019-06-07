@@ -1,11 +1,11 @@
 <%@page import="com.bookstore.bean.BookInfo"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>ͼ�������Ϣ�б�</title>
+    <title>图书基本信息列表</title>
 	<style type="text/css">
 		@import '<%=request.getContextPath()%>/background/css/body.css';
 	</style>
@@ -16,16 +16,16 @@
      %>
      <script type="text/javascript">
      	function isDelete(bookName) {
-    		return confirm("��Ҫɾ��[" + bookName + "]��");
+    		return confirm("您要删除[" + bookName + "]吗？");
     	}
     	
     	function gotoNowPage(nowPage) {
     		if(isNaN(nowPage)) {
-    			alert("������������ֵ��");
+    			alert("请输入整型数值！");
     			return;
     		}
     		if(nowPage <= 0 || nowPage > <%=pageCount%>) {
-    			alert("������ҳ�뷶Χ�ڵ���ֵ��");
+    			alert("请输入页码范围内的数值！");
     			return;
     		}
     		
@@ -36,25 +36,25 @@
   
   <body>
   	<table border = "1">
-  		<caption>ͼ�������Ϣ��</caption>
+  		<caption>图书基本信息表</caption>
   		<tr>
-  			<th>ͼ����</th>
-  			<th>ͼ������</th>
-  			<th>ͼ�������</th>
-  			<th>����</th>
-  			<th>����������</th>
-  			<th>ͼ�����</th>
-  			<th>ͼ��СͼƬ</th>
-  			<th>ͼ���ͼƬ</th>
-  			<th>�۸�</th>
-  			<th>��������</th>
-  			<th>��Ա��</th>
-  			<th>ͼ��״̬</th>
-  			<th>�ϼ�ʱ��</th>
-  			<th>�����</th>
-  			<th>�ۻ�������</th>
-  			<th>�޸�</th>
-  			<th>ɾ��</th>
+  			<th>图书编号</th>
+  			<th>图书名称</th>
+  			<th>图书类别编号</th>
+  			<th>作者</th>
+  			<th>出版社名称</th>
+  			<th>图书介绍</th>
+  			<th>图书小图片</th>
+  			<th>图书大图片</th>
+  			<th>价格</th>
+  			<th>出版日期</th>
+  			<th>会员价</th>
+  			<th>图书状态</th>
+  			<th>上架时间</th>
+  			<th>库存量</th>
+  			<th>累积销售量</th>
+  			<th>修改</th>
+  			<th>删除</th>
   		</tr>
   		
   		<%for(BookInfo books : bookInfos) { %>
@@ -81,20 +81,20 @@
   		<%} %>
   		<tr>
   			<td colspan="17">
-  			<a href="<%=request.getContextPath()%>/background/saveBookInfo.jsp">����</a>
-  			��<%=pageCount %>ҳ
-  			��<%=nowPage %>ҳ
+  			<a href="<%=request.getContextPath()%>/background/saveBookInfo.jsp">新增</a>
+  			共<%=pageCount %>页
+  			第<%=nowPage %>页
   			<%if(nowPage == 1) { %>
-  				��һҳ ��һҳ
+  				第一页 上一页
   			<%} else { %>
-  				<a href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=1">��һҳ</a>
-  				<a href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=<%=nowPage-1%>">��һҳ</a>
+  				<a href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=1">第一页</a>
+  				<a href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=<%=nowPage-1%>">上一页</a>
   			<%} %>
   			<%if(nowPage == pageCount) { %>
-  				��һҳ ���ҳ
+  				下一页 最后页
   			<%} else { %>
-  				<a href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=<%=nowPage+1%>">��һҳ</a>
-  				<a href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=<%=pageCount%>">���ҳ</a>
+  				<a href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=<%=nowPage+1%>">下一页</a>
+  				<a href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=<%=pageCount%>">最后页</a>
   			<%} %>
   			
   			<select onchange="gotoNowPage(this.value)">
@@ -103,13 +103,13 @@
   		 				<%if(nowPage == i) {
   		 					out.print("selected");
   		 				} %>
-  		 			>��<%=i%>ҳ</option>
+  		 			>第<%=i%>页</option>
   		 		<%} %>
   		 	</select>
   		 	
-  		 	��
+  		 	第
   		 	<input size="2" value="<%=nowPage %>" onchange="gotoNowPage(this.value)">
-  		 	ҳ
+  		 	页
   		 	
   			</td>
   		</tr>

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <style type="text/css">
 	a{text-decoration: none; color:#1A7CBC}
 	a:hover{color: red; }
@@ -6,7 +6,7 @@
 	<table  width="160" border="0" cellspacing="0" cellpadding="0">
 		<tr>
 			<td background="images/ht04.jpg" class="wr4">
-				<div align="center">ÓÃ »§ ¹Ü Àí</div></td>
+				<div align="center">ç”¨ æˆ· ç®¡ ç†</div></td>
 			<td width="12"><img src="images/ht03.jpg" width="12" height="20">
 			</td>
 		</tr>
@@ -15,25 +15,25 @@
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%= request.getContextPath() %>/FindAllAdminServlet?nowPage=1" target="mainFrame">¹ÜÀíÔ±ĞÅÏ¢</a>
+				href="<%= request.getContextPath() %>/FindAllAdminServlet?nowPage=1" target="mainFrame">ç®¡ç†å‘˜ä¿¡æ¯</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%= request.getContextPath() %>/FindAllEmployeeServlet?nowPage=1" target="mainFrame">Ô±¹¤ĞÅÏ¢¹ÜÀí</a>
+				href="<%= request.getContextPath() %>/FindAllEmployeeServlet?nowPage=1" target="mainFrame">å‘˜å·¥ä¿¡æ¯ç®¡ç†</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%= request.getContextPath() %>/FindAllCustomerInfoServlet?nowPage=1" target="mainFrame">ÓÃ»§»ù±¾ĞÅÏ¢</a>
+				href="<%= request.getContextPath() %>/FindAllCustomerInfoServlet?nowPage=1" target="mainFrame">ç”¨æˆ·åŸºæœ¬ä¿¡æ¯</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=1" target="mainFrame">ÓÃ»§ÏêÏ¸ĞÅÏ¢</a>
+				href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=1" target="mainFrame">ç”¨æˆ·è¯¦ç»†ä¿¡æ¯</a>
 			</td>
 		</tr>
 		<tr>
@@ -44,7 +44,7 @@
 	<table width="160" border="0" cellspacing="0" cellpadding="0">
 		<tr>
 			<td background="images/ht08.jpg" class="wr4">
-				<div align="center">½» »¥ ¹Ü Àí</div></td>
+				<div align="center">äº¤ äº’ ç®¡ ç†</div></td>
 			<td width="12"><img src="images/ht07.jpg" width="12" height="20">
 			</td>
 		</tr>
@@ -53,16 +53,16 @@
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%=request.getContextPath()%>/FindAllBookDiscussServlet?nowPage=1" target="mainFrame">Í¼ÊéÆÀ¼Û</a>
+				href="<%=request.getContextPath()%>/FindAllBookDiscussServlet?nowPage=1" target="mainFrame">å›¾ä¹¦è¯„ä»·</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="#">À¸Ä¿¹ÜÀí</a></td>
+			<td class="wr4" width="120"><a href="#">æ ç›®ç®¡ç†</a></td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="#">·ÃÎÊ·ÖÎö</a></td>
+			<td class="wr4" width="120"><a href="#">è®¿é—®åˆ†æ</a></td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
@@ -72,8 +72,8 @@
 		<tr>
 			<td background="images/ht04.jpg" class="wr4">
 				<div align="center">
-					<%--<a href="systemSet.htm" target="mainFrame">Ïµ Í³ Éè ÖÃ</a>--%>
-						Ïµ Í³ Éè ÖÃ
+					<%--<a href="systemSet.htm" target="mainFrame">ç³» ç»Ÿ è®¾ ç½®</a>--%>
+						ç³» ç»Ÿ è®¾ ç½®
 				</div></td>
 			<td width="12"><img src="images/ht03.jpg" width="12" height="20">
 			</td>
@@ -81,8 +81,8 @@
 		<tr>
 			<td >
 				<div align="center">
-					<a href="<%=request.getContextPath()%>/BackgroundLoginOutServlet" target="_parent">ÍË ³ö Ïµ Í³</a>
-					<%--»Øµ½¹ÜÀíÔ±µÇÂ½µÄ½çÃæ--%>
+					<a href="<%=request.getContextPath()%>/BackgroundLoginOutServlet" target="_parent">é€€ å‡º ç³» ç»Ÿ</a>
+					<%--å›åˆ°ç®¡ç†å‘˜ç™»é™†çš„ç•Œé¢--%>
 				</div></td>
 			<%--<td width="12"><img src="images/ht07.jpg" width="12" height="20">--%>
 			<%--</td>--%>

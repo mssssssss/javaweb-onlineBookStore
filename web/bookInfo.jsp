@@ -1,5 +1,5 @@
-<%--ÏÔÊ¾Í¼ÊéµÄ¾ßÌåÐÅÏ¢µÄÒ³Ãæ--%>
-<%@page language="java" contentType="text/html; charset=gbk"%>
+<%--æ˜¾ç¤ºå›¾ä¹¦çš„å…·ä½“ä¿¡æ¯çš„é¡µé¢--%>
+<%@page language="java" contentType="text/html; charset=utf-8"%>
 <%@page import="com.bookstore.bean.BookInfo"%>
 <%@page import="com.bookstore.bean.BookDiscuss"%>
 <%@page import="java.util.List"%>
@@ -12,9 +12,9 @@
         a:hover{color: red;}
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ÔÆÆðµã</title>
-<meta name="keywords" content="¹Ø¼ü×Ö" />
-<meta name="description" content="Ò³ÃæÃèÊö" />
+<title>äº‘èµ·ç‚¹</title>
+<meta name="keywords" content="å…³é”®å­—" />
+<meta name="description" content="é¡µé¢æè¿°" />
 <link rel="stylesheet" href="style/public.css" type="text/css" />
 <link rel="stylesheet" href="style/index.css" type="text/css" />
 <script src="js/banner.js" type="text/javascript"></script>
@@ -33,36 +33,36 @@
 	<div class="top1_1">
         <c:choose >
             <c:when test="${sessionScope.customerInfo.custName!=null}">
-                µ±Ç°ÓÃ»§Éí·Ý:<b>${sessionScope.customerInfo.custName}</b> »¶Ó­·ÃÎÊ±¾ÉÌ³Ç£¡&nbsp;&nbsp;&nbsp;
+                å½“å‰ç”¨æˆ·èº«ä»½:<b>${sessionScope.customerInfo.custName}</b> æ¬¢è¿Žè®¿é—®æœ¬å•†åŸŽï¼&nbsp;&nbsp;&nbsp;
             </c:when>
             <c:otherwise>
-                µ±Ç°ÓÃ»§Éí·Ý:ÓÎ¿Í µÇÂ¼ºó·½¿ÉÏÂµ¥&nbsp;&nbsp;&nbsp;
+                å½“å‰ç”¨æˆ·èº«ä»½:æ¸¸å®¢ ç™»å½•åŽæ–¹å¯ä¸‹å•&nbsp;&nbsp;&nbsp;
             </c:otherwise>
         </c:choose>
-        <a  href="${pageContext.request.contextPath}/qtLogin.jsp">ÓÃ»§µÇÂ¼</a>
-        <a  href="${pageContext.request.contextPath}/background/index.jsp">¹ÜÀíÔ±µÇÂ½</a>
+        <a  href="${pageContext.request.contextPath}/qtLogin.jsp">ç”¨æˆ·ç™»å½•</a>
+        <a  href="${pageContext.request.contextPath}/background/index.jsp">ç®¡ç†å‘˜ç™»é™†</a>
     </div>
 	<div class="top1_2">
 		<div class="top1_2_l">
             <ul class="yudingCon">
-                <%--<li>ÊéÃû:<input type="text" name="" class="kuang" />  </li>--%>
-            	<%--<li>×÷Õß:<input type="text" name="" class="kuang" />  </li>--%>
+                <%--<li>ä¹¦å:<input type="text" name="" class="kuang" />  </li>--%>
+            	<%--<li>ä½œè€…:<input type="text" name="" class="kuang" />  </li>--%>
             	<%--<li class="ribtn"><input type="image" src="images/btn.gif" class="btn"/></li>--%>
 		</ul>
         </div>
 		<div class="top1_2_r">
         	<ul class="other">
-            	<li><a href="#"><img src="images/car.jpg"/><br />¹ºÎï³µ</a> </li>
-                <li><a href="#"><img src="images/car.jpg"/><br />¶©µ¥²éÑ¯</a></li>
-                <li><a href="#"><img src="images/car.jpg"/><br />ÎÒµÄ»ý·Ö</a></li>
-                <li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />¹ØÁªÍøÕ¾</a></li>  </ul>
+            	<li><a href="#"><img src="images/car.jpg"/><br />è´­ç‰©è½¦</a> </li>
+                <li><a href="#"><img src="images/car.jpg"/><br />è®¢å•æŸ¥è¯¢</a></li>
+                <li><a href="#"><img src="images/car.jpg"/><br />æˆ‘çš„ç§¯åˆ†</a></li>
+                <li><a href="http://www.dangdang.com/"><img src="images/car.jpg"/><br />å…³è”ç½‘ç«™</a></li>  </ul>
             <ul class="menu">
-                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">Ê×Ò³</a></li>
-                <li><a href="#">Ð¡Ëµ</a></li>
-                <li><a href="#">ÎÄÒÕ</a></li>
-                <li><a href="#">´«¼Ç</a></li>
-                <li><a href="help.jsp">°ïÖú</a></li>
-                <li><a href="about.jsp">¹ØÓÚ</a></li>
+                <li><a href="<%=request.getContextPath() %>/InitIndexServlet">é¦–é¡µ</a></li>
+                <li><a href="#">å°è¯´</a></li>
+                <li><a href="#">æ–‡è‰º</a></li>
+                <li><a href="#">ä¼ è®°</a></li>
+                <li><a href="help.jsp">å¸®åŠ©</a></li>
+                <li><a href="about.jsp">å…³äºŽ</a></li>
             </ul>
         </div>
 	</div>
@@ -72,7 +72,7 @@
 	<div class="middle_left">
   		<div class="middle_left1">
         	<div class="middle_left1title">
-            	ËùÓÐÉÌÆ··ÖÀà
+            	æ‰€æœ‰å•†å“åˆ†ç±»
             </div>
             <div class="middle_left1con">
                <%@include file="leftBookType.jsp"%>
@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="middle_left3">
-        	<h3 class="paihtit">×îÐÂÅÅÐÐ</h3>
+        	<h3 class="paihtit">æœ€æ–°æŽ’è¡Œ</h3>
         	<%for(int i = 0; i < rxbooks.size(); i++){ 
         		BookInfo bookInfo = new BookInfo();
         		bookInfo = rxbooks.get(i);
@@ -92,7 +92,7 @@
     </div>
     <div class="middle_right">
     	<div class="middle_right6tit">
-        	Äúµ±Ç°µÄÎ»ÖÃ£ºÍøÕ¾Ê×Ò³ --- ²úÆ·Àà±ð  
+        	æ‚¨å½“å‰çš„ä½ç½®ï¼šç½‘ç«™é¦–é¡µ --- äº§å“ç±»åˆ«  
         </div>
         <div class="middle_right6con">
     <div id="preview">
@@ -158,38 +158,38 @@
         <div class="middle_rightR">
         <table width="100%" border="0">
           <tr>
-            <td>ÊÐ³¡¼Û:<%=bookInfos.getPrice() %>Ôª</td>
-            <td>ÉÌÆ·»õ:<%=bookInfos.getBookName() %></td>
+            <td>å¸‚åœºä»·:<%=bookInfos.getPrice() %>å…ƒ</td>
+            <td>å•†å“è´§:<%=bookInfos.getBookName() %></td>
           </tr>
           <tr>
-            <td>»áÔ±¼Û£º<%=bookInfos.getHyprice() %>Ôª</td>
-            <td>¿â´æÇé¿ö£º<%=bookInfos.getNum() %>¼þ</td>
+            <td>ä¼šå‘˜ä»·ï¼š<%=bookInfos.getHyprice() %>å…ƒ</td>
+            <td>åº“å­˜æƒ…å†µï¼š<%=bookInfos.getNum() %>ä»¶</td>
           </tr>
            <tr>
-            <td>×÷Õß:<%=bookInfos.getAuthor() %></td>
-            <td>ÀÛ¼ÆÏúÁ¿:<%=bookInfos.getSaleCount() %></td>
+            <td>ä½œè€…:<%=bookInfos.getAuthor() %></td>
+            <td>ç´¯è®¡é”€é‡:<%=bookInfos.getSaleCount() %></td>
           </tr>
           <tr>
-            <td>³ö°æÉç:<%=bookInfos.getPbName() %></td>
+            <td>å‡ºç‰ˆç¤¾:<%=bookInfos.getPbName() %></td>
           </tr>
           <tr>
-            <td>³ö°æÈÕÆÚ:<%=bookInfos.getPbdate() %></td>
+            <td>å‡ºç‰ˆæ—¥æœŸ:<%=bookInfos.getPbdate() %></td>
           </tr>
           <tr>
-            <td>ÉÏ¼ÜÈÕÆÚ:<%=bookInfos.getSjdate() %></td>
+            <td>ä¸Šæž¶æ—¥æœŸ:<%=bookInfos.getSjdate() %></td>
           </tr>
           <tr>
-            <td>ËùÊôÆ·ÅÆ£ºÎÄÑ§</td>
-            <td>µã»÷´ÎÊý£º123456</td>
+            <td>æ‰€å±žå“ç‰Œï¼šæ–‡å­¦</td>
+            <td>ç‚¹å‡»æ¬¡æ•°ï¼š123456</td>
           </tr>
           <tr>
-            <td colspan="2">ÉÌÆ·ÆÀÂÛ£º <img src="images/icon3.jpg" /> (ÒÑÓÐ<%=discuss.size() %>ÈËÆÀÂÛ)</td>
+            <td colspan="2">å•†å“è¯„è®ºï¼š <img src="images/icon3.jpg" /> (å·²æœ‰<%=discuss.size() %>äººè¯„è®º)</td>
           </tr>
         </table>
-        <div class="middle_rightRC"> ÎÒÒªÂò
+        <div class="middle_rightRC"> æˆ‘è¦ä¹°
         	<input type="text" name="input" class="kwid" value="1"/>
         <br />
-        	ÒÑÑ¡Ôñ£º1¼þ		×Ü¼Û:<span class="STYLE1"><%=bookInfos.getHyprice() %></span> Ôª<br />
+        	å·²é€‰æ‹©ï¼š1ä»¶		æ€»ä»·:<span class="STYLE1"><%=bookInfos.getHyprice() %></span> å…ƒ<br />
  	 	<a href="<%=request.getContextPath() %>/AddGwcItemServlet?id=<%=bookInfos.getBookId() %>">
  	 		<input name="" type="image" src="images/jr.jpg" class="button11"/>
  	 	</a>
@@ -198,34 +198,34 @@
       </div> 	
         <div class="middle8">
         	<div class="middle8tit">
-            	<a href="#"><span>²úÆ·ÐÅÏ¢</span></a>
+            	<a href="#"><span>äº§å“ä¿¡æ¯</span></a>
             </div>
             <div class="middle8con" >             
 			<%=bookInfos.getContext() %>
         	</div>
         <div class="middle9">
-        	<div class="middle9tit">ÊéÆÀ:</div>
+        	<div class="middle9tit">ä¹¦è¯„:</div>
         		<ul>
         		<c:forEach var="bookDiscuss" items="${requestScope.discuss}">
         			&nbsp;&nbsp;&nbsp;&nbsp;
-        			ÊéÆÀ±àºÅÎª${bookDiscuss.custId}µÄËµ£º${bookDiscuss.context}<br/><br/>
+        			ä¹¦è¯„ç¼–å·ä¸º${bookDiscuss.custId}çš„è¯´ï¼š${bookDiscuss.context}<br/><br/>
         		</c:forEach>
         		</ul>
         	</div>
         </div>
         <div class="middle9">
-        	<div class="middle9tit">ÓÃ»§ÆÀÂÛ</div>
+        	<div class="middle9tit">ç”¨æˆ·è¯„è®º</div>
             <div class="middle_right9con">
-            	<%--<div>ÓÃ»§Ãû£ºÄäÃûÓÃ»§</div>--%>
+            	<%--<div>ç”¨æˆ·åï¼šåŒ¿åç”¨æˆ·</div>--%>
                 <%--<div>E-mail:<input type="text" name="text" size="25" /></div>--%>
-            	<%--<div>ÆÀÂÛµÈ¼¶£º--%>
+            	<%--<div>è¯„è®ºç­‰çº§ï¼š--%>
             		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/>--%>
             		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/>--%>
             		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif" />--%>
             		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif" />--%>
             		<%--<input name="" type="radio" value="" /><img src="images/pl1.gif"/></div>--%>
-            	<%--<div>ÆÀÂÛÄÚÈÝ£º<textarea name="" cols="" rows=""></textarea></div>--%>
-                <%--<div>ÑéÖ¤Âë£º<input type="text"  size="15" /><img src="images/yz.gif"/></div>--%>
+            	<%--<div>è¯„è®ºå†…å®¹ï¼š<textarea name="" cols="" rows=""></textarea></div>--%>
+                <%--<div>éªŒè¯ç ï¼š<input type="text"  size="15" /><img src="images/yz.gif"/></div>--%>
                 <%--<div><input type="button"  class="btn4" value=" " /></div>--%>
             </div>
             </div>        
@@ -235,13 +235,13 @@
 <!-- footer2 -->
 <div class="footer3">
 	<div class="footer3_in">
-		<a href="#">¹«Ë¾¼ò½é</a><span>|</span><a href="#">ÃâÔðÌõ¿î</a><span>|</span><a href="#">ÒþË½±£»¤</a><span>|</span>
-		<a href="#">×ÉÑ¯ÈÈµã</a><span>|</span><a href="#">ºÏ×÷ÕÐÄ¼</a><span>|</span><a href="#">ÅäËÍ·½Ê½</a><span>|</span>
-		<a href="#">ÁªÏµÎÒÃÇ</a>
+		<a href="#">å…¬å¸ç®€ä»‹</a><span>|</span><a href="#">å…è´£æ¡æ¬¾</a><span>|</span><a href="#">éšç§ä¿æŠ¤</a><span>|</span>
+		<a href="#">å’¨è¯¢çƒ­ç‚¹</a><span>|</span><a href="#">åˆä½œæ‹›å‹Ÿ</a><span>|</span><a href="#">é…é€æ–¹å¼</a><span>|</span>
+		<a href="#">è”ç³»æˆ‘ä»¬</a>
     </div>
     <div class="footer2">
-    	@ 2011-2012 Ðñ°îÒ½ÁÆÉÌ³Ç °æÈ¨ËùÓÐ£¬²¢±£ÁôËùÓÐÈ¨Àû¡£<br />
-    	µç»°:029-62966051 87811277 ´«Õæ£º029-62966051 ÉÂICP±¸1109231ºÅ ¼¼ÊõÖ§³Ö£º<a href="#">»ÕÔÏÍøÂç</a>
+    	@ 2011-2012 æ—­é‚¦åŒ»ç–—å•†åŸŽ ç‰ˆæƒæ‰€æœ‰ï¼Œå¹¶ä¿ç•™æ‰€æœ‰æƒåˆ©ã€‚<br />
+    	ç”µè¯:029-62966051 87811277 ä¼ çœŸï¼š029-62966051 é™•ICPå¤‡1109231å· æŠ€æœ¯æ”¯æŒï¼š<a href="#">å¾½éŸµç½‘ç»œ</a>
     </div>
 </div>
 </body>

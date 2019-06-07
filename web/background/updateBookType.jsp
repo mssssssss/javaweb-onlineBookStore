@@ -1,10 +1,10 @@
 <%@page import="com.bookstore.bean.BookType"%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>�޸�ͼ�������Ϣ</title>
+    <title>修改图书类别信息</title>
     <style type="text/css">
     	@import '<%=request.getContextPath()%>/background/css/addUpdate.css';
     </style>
@@ -16,26 +16,26 @@
    %>
    	<form action="<%=request.getContextPath()%>/UpdateBookTypeServlet" method="post">
    		<table align="center">
-   			<caption>�޸�ͼ�������Ϣ</caption>
+   			<caption>修改图书类别信息</caption>
    			<tr>
-   				<td>�޸�ͼ�������Ϣ��</td>
+   				<td>修改图书类别信息：</td>
    				<td><input type="text" name="bookTypeId" value="<%=bookType.getBookTypeId()%>"
    					readonly></td>
    			</tr>
    			<tr>
-   				<td>�޸ĸ���ţ�</td>
+   				<td>修改父编号：</td>
    				<td><input type="text" name="parentId" value="<%=bookType.getParentId()%>"></td>
    			</tr>
    			<tr>
-   				<td>�޸�ͼ��������ƣ�</td>
+   				<td>修改图书类别名称：</td>
    				<td><input type="text" name="bookTypeName" value="<%=bookType.getBookTypeName()%>"></td>
    			</tr>
    			<tr>
-   				<td>�޸ı�ע��</td>
+   				<td>修改备注：</td>
    				<td><input type="text" name="context" value="<%=bookType.getContext()%>"></td>
    			</tr>
    			<tr>
-   				<td>�޸��Ƿ���ã�</td>
+   				<td>修改是否可用：</td>
    				<td><input type="text" name="isDelete" value="<%=bookType.getIsDelete()%>"></td>
    			</tr>
    			<tr>

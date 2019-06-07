@@ -1,5 +1,5 @@
-<%--��admin���ݵ�½��ȥ�Ĺ���ҳ�����--%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%--以admin身份登陆进去的管理页面的左部--%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <style type="text/css">
 	a{text-decoration: none; color:#1A7CBC}
 	a:hover{color: red; }
@@ -7,7 +7,7 @@
 	<table width="160" border="0" cellspacing="0" cellpadding="0">
 		<tr>
 			<td background="images/ht04.jpg" class="wr4">
-				<div align="center">�� �� �� ��</div></td>
+				<div align="center">用 户 管 理</div></td>
 			<td width="12"><img src="images/ht03.jpg" width="12" height="20">
 			</td>
 		</tr>
@@ -16,25 +16,25 @@
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%= request.getContextPath() %>/FindAllAdminServlet?nowPage=1" target="mainFrame">����Ա��Ϣ</a>
+				href="<%= request.getContextPath() %>/FindAllAdminServlet?nowPage=1" target="mainFrame">管理员信息</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%= request.getContextPath() %>/FindAllEmployeeServlet?nowPage=1" target="mainFrame">Ա����Ϣ����</a>
+				href="<%= request.getContextPath() %>/FindAllEmployeeServlet?nowPage=1" target="mainFrame">员工信息管理</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%= request.getContextPath() %>/FindAllCustomerInfoServlet?nowPage=1" target="mainFrame">�û�������Ϣ</a>
+				href="<%= request.getContextPath() %>/FindAllCustomerInfoServlet?nowPage=1" target="mainFrame">用户基本信息</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=1" target="mainFrame">�û���ϸ��Ϣ</a>
+				href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=1" target="mainFrame">用户详细信息</a>
 			</td>
 		</tr>
 		<tr>
@@ -45,7 +45,7 @@
 	<table width="160" border="0" cellspacing="0" cellpadding="0">
 		<tr>
 			<td background="images/ht06.jpg" class="wr4">
-				<div align="center">ͼ �� �� Ϣ</div></td>
+				<div align="center">图 书 信 息</div></td>
 			<td width="12"><img src="images/ht05.jpg" width="12" height="20">
 			</td>
 		</tr>
@@ -54,35 +54,35 @@
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%=request.getContextPath()%>/FindAllNewsServlet?nowPage=1" target="mainFrame">���ŷ���</a>
+				href="<%=request.getContextPath()%>/FindAllNewsServlet?nowPage=1" target="mainFrame">新闻发布</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%=request.getContextPath()%>/FindAllBookTypeServlet?nowPage=1" target="mainFrame">ͼ�����</a>
+				href="<%=request.getContextPath()%>/FindAllBookTypeServlet?nowPage=1" target="mainFrame">图书类别</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=1" target="mainFrame">ͼ�������Ϣ</a>
+				href="<%=request.getContextPath()%>/FindAllBookInfoServlet?nowPage=1" target="mainFrame">图书基本信息</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=1" target="mainFrame">�ղؼ���Ϣ</a>
+				href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=1" target="mainFrame">收藏夹信息</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="#">���۹���</a>
+			<td class="wr4" width="120"><a href="#">销售管理</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="#" >��Ʒ�����Ϣ</a>
+			<td class="wr4" width="120"><a href="#" >商品库存信息</a>
 			</td>
 		</tr>
 		<tr>
@@ -93,7 +93,7 @@
 	<table width="160" border="0" cellspacing="0" cellpadding="0">
 		<tr>
 			<td background="images/ht08.jpg" class="wr4">
-				<div align="center">�� �� �� ��</div></td>
+				<div align="center">交 互 管 理</div></td>
 			<td width="12"><img src="images/ht07.jpg" width="12" height="20">
 			</td>
 		</tr>
@@ -102,37 +102,37 @@
 		<tr>
 			<td width="40">&nbsp;</td>
 			<td class="wr4" width="120"><a
-				href="<%=request.getContextPath()%>/FindAllBookDiscussServlet?nowPage=1" target="mainFrame">ͼ������</a>
+				href="<%=request.getContextPath()%>/FindAllBookDiscussServlet?nowPage=1" target="mainFrame">图书评价</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=1" target="mainFrame">���۹���</a>
+			<td class="wr4" width="120"><a href="<%=request.getContextPath()%>/FindAllFavoriteServlet?nowPage=1" target="mainFrame">评价管理</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="#">��Ŀ����</a>
+			<td class="wr4" width="120"><a href="#">栏目管理</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="#">ͼ���ϼ�</a>
+			<td class="wr4" width="120"><a href="#">图书上架</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="#">ȱ������</a>
+			<td class="wr4" width="120"><a href="#">缺货管理</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="#">�ʼ��б�����</a>
+			<td class="wr4" width="120"><a href="#">邮件列表发送</a>
 			</td>
 		</tr>
 		<tr>
 			<td width="40">&nbsp;</td>
-			<td class="wr4" width="120"><a href="#">���ʷ���</a>
+			<td class="wr4" width="120"><a href="#">访问分析</a>
 			</td>
 		</tr>
 	</table>
@@ -141,8 +141,8 @@
 		<tr>
 		<td background="images/ht04.jpg" class="wr4">
 			<div align="center">
-				<%--<a href="systemSet.html" target="mainFrame">ϵ ͳ �� ��</a>--%>
-				ϵ ͳ �� ��
+				<%--<a href="systemSet.html" target="mainFrame">系 统 设 置</a>--%>
+				系 统 设 置
 			</div></td>
 		<td width="12"><img src="images/ht03.jpg" width="12" height="20">
 		</td>
@@ -150,8 +150,8 @@
 		<tr>
 			<td >
 				<div align="center">
-					<a href="<%=request.getContextPath()%>/BackgroundLoginOutServlet" target="_parent">�� �� ϵ ͳ</a>
-					<%--�ص�����Ա��½�Ľ���--%>
+					<a href="<%=request.getContextPath()%>/BackgroundLoginOutServlet" target="_parent">退 出 系 统</a>
+					<%--回到管理员登陆的界面--%>
 				</div></td>
 			<%--<td width="12"><img src="images/ht07.jpg" width="12" height="20">--%>
 			<%--</td>--%>

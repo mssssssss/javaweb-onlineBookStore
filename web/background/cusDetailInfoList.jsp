@@ -1,12 +1,12 @@
 <%@page import="com.bookstore.bean.CustomerDetailInfo"%>
 <%@page import="com.bookstore.bean.CustomerInfo"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>ÓÃ»§ÏêÏ¸ĞÅÏ¢ÁĞ±í</title>
+    <title>ç”¨æˆ·è¯¦ç»†ä¿¡æ¯åˆ—è¡¨</title>
     <style type="text/css">
     	@import '<%=request.getContextPath()%>/background/css/body.css';
     </style>
@@ -19,15 +19,15 @@
 	 
 	 <script type="text/javascript">
 	 	function isDelete(custId) {
-	 		return confirm("ÄúÒªÉ¾³ı[" + custId + "]Âğ£¿");
+	 		return confirm("æ‚¨è¦åˆ é™¤[" + custId + "]å—ï¼Ÿ");
 	 	}
 	 	function gotoNowPage(nowPage) {
     		if(isNaN(nowPage)) {
-    			alert("ÇëÊäÈëÕûĞÍÊıÖµ£¡");
+    			alert("è¯·è¾“å…¥æ•´å‹æ•°å€¼ï¼");
     			return;
     		}
     		if(nowPage <= 0 || nowPage > <%=pageCount%>) {
-    			alert("ÇëÊäÈëÒ³Âë·¶Î§ÄÚµÄÊıÖµ£¡");
+    			alert("è¯·è¾“å…¥é¡µç èŒƒå›´å†…çš„æ•°å€¼ï¼");
     			return;
     		}
     		
@@ -38,17 +38,17 @@
   
   <body>
   	<table border="1">
-  		<caption>ÓÃ»§ÏêÏ¸ĞÅÏ¢±í</caption>
+  		<caption>ç”¨æˆ·è¯¦ç»†ä¿¡æ¯è¡¨</caption>
   		<tr>
-  			<th>ÓÃ»§±àºÅ</th>
-  			<th>ÓÃ»§ÁªÏµµç»°</th>
-  			<th>ÓÃ»§µØÖ·</th>
-  			<th>ÓÃ»§ĞÔ±ğ</th>
-  			<th>ÓÃ»§ÄêÁä</th>
-  			<th>ÓÃ»§ÀÛ¼ÆÏû·Ñ½ğ¶î</th>
-  			<th>ÓÃ»§qqºÅÂë</th>
-  			<th>ĞŞ¸Ä</th>
-  			<th>É¾³ı</th>
+  			<th>ç”¨æˆ·ç¼–å·</th>
+  			<th>ç”¨æˆ·è”ç³»ç”µè¯</th>
+  			<th>ç”¨æˆ·åœ°å€</th>
+  			<th>ç”¨æˆ·æ€§åˆ«</th>
+  			<th>ç”¨æˆ·å¹´é¾„</th>
+  			<th>ç”¨æˆ·ç´¯è®¡æ¶ˆè´¹é‡‘é¢</th>
+  			<th>ç”¨æˆ·qqå·ç </th>
+  			<th>ä¿®æ”¹</th>
+  			<th>åˆ é™¤</th>
   		</tr>
   		<%for(CustomerDetailInfo info : infos) { %>
   			<tr>
@@ -67,32 +67,32 @@
   		
   		<tr>
   			<td colspan="9">
-  				<a href="<%=request.getContextPath()%>/background/saveCusDetailInfo.jsp">Ôö¼Ó</a>
-  				¹²<%=pageCount %>Ò³
-  				µÚ<%=nowPage %>Ò³
+  				<a href="<%=request.getContextPath()%>/background/saveCusDetailInfo.jsp">å¢åŠ </a>
+  				å…±<%=pageCount %>é¡µ
+  				ç¬¬<%=nowPage %>é¡µ
   				<%if(nowPage == 1) { %>
-  					µÚÒ»Ò³ ÉÏÒ»Ò³
+  					ç¬¬ä¸€é¡µ ä¸Šä¸€é¡µ
   				<%} else { %>
-  					<a href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=1">µÚÒ»Ò³</a>
-  					<a href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=<%=nowPage-1%>">ÉÏÒ»Ò³</a>
+  					<a href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=1">ç¬¬ä¸€é¡µ</a>
+  					<a href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=<%=nowPage-1%>">ä¸Šä¸€é¡µ</a>
   				<%} %>
   				
   				<%if(nowPage == pageCount) { %>
-  					ÏÂÒ»Ò³ ×îºóÒ³
+  					ä¸‹ä¸€é¡µ æœ€åé¡µ
   				<%} else { %>
-  					<a href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=<%=nowPage+1%>">ÏÂÒ»Ò³</a>
-  					<a href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=<%=pageCount%>">×îºóÒ³</a>
+  					<a href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=<%=nowPage+1%>">ä¸‹ä¸€é¡µ</a>
+  					<a href="<%=request.getContextPath()%>/FindAllCusDetailInfoServlet?nowPage=<%=pageCount%>">æœ€åé¡µ</a>
   				<%} %>
   				
   				<select onchange="gotoNowPage(this.value)">
   					<%for(int i = 1; i <= pageCount; i++) { %>
   						<option value="<%=i%>"
   							<%if(nowPage == i) {out.print("selected");} %>
-  						>µÚ<%=i%>Ò³</option>
+  						>ç¬¬<%=i%>é¡µ</option>
   					<%} %>
   				</select>
   				
-  				µÚ<input size="2" value="<%=nowPage %>" onchange="gotoNowPage(this.value)">Ò³
+  				ç¬¬<input size="2" value="<%=nowPage %>" onchange="gotoNowPage(this.value)">é¡µ
   			</td>
   		</tr>
   	</table>

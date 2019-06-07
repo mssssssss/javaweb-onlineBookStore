@@ -1,11 +1,11 @@
 <%@page import="com.bookstore.bean.News"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>пч╦дпбнепео╒</title>
+    <title>Д©╝Ф■╧Ф√╟И≈╩Д©║Ф│╞</title>
 	<style type="text/css">
 		@import '<%=request.getContextPath()%>/background/css/addUpdate.css'
 	</style>
@@ -17,22 +17,22 @@
   	 %>
   	 <form action="<%=request.getContextPath()%>/UpdateNewsServlet" method="post">
   	 	<table align="center">
-  	 		<caption>пч╦дпбнепео╒</caption>
+  	 		<caption>Д©╝Ф■╧Ф√╟И≈╩Д©║Ф│╞</caption>
   	 		<tr>
-  	 			<td>пбне╠Ю╨её╨</td>
+  	 			<td>Ф√╟И≈╩Г╪√Е▐╥О╪ </td>
   	 			<td><input type="text" name="newsId" value="<%=news.getNewsId() %>"
   	 				readonly></td>
   	 		</tr>
   	 		<tr>
-  	 			<td>пбне╠ЙлБё╨</td>
+  	 			<td>Ф√╟И≈╩Ф═┤И╒≤О╪ </td>
   	 			<td><input type="text" name="newTitle" value="<%=news.getNewTitle()%>"></td>
   	 		</tr>
   	 		<tr>
-  	 			<td>пбнедзхщё╨</td>
+  	 			<td>Ф√╟И≈╩Е├┘Е╝╧О╪ </td>
   	 			<td><input type="text" name="context" value="<%=news.getContext()%>"></td>
   	 		</tr>
   	 		<tr>
-  	 			<td>пбне╥╒╡╪й╠╪Дё╨</td>
+  	 			<td>Ф√╟И≈╩Е▐▒Е╦┐Ф≈╤И≈╢О╪ </td>
   	 			<td><input type="text" name="createTime" value="<%=news.getCreateTime()%>"></td>
   	 		</tr>
   	 		<tr>

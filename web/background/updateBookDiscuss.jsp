@@ -1,10 +1,10 @@
 <%@page import="com.bookstore.bean.BookDiscuss"%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>�޸�������Ϣ</title>
+    <title>修改书评信息</title>
     <style type="text/css">
 		@import '<%= request.getContextPath() %>/background/css/addUpdate.css'
 	</style>
@@ -17,24 +17,24 @@
   	 <form action="<%= request.getContextPath() %>/UpdateBookDiscussServlet" method="post">
      	<table align="center">
      		<tr>
-  				<td>������ţ�</td>
+  				<td>书评编号：</td>
   				<td><input type="text" name="disId" value="<%=discuss.getDisId()%>"
   					readonly></td>
   			</tr>
      		<tr>
-  				<td>ͼ���ţ�</td>
+  				<td>图书编号：</td>
   				<td><input type="text" name="bookId" value="<%=discuss.getBookId()%>"></td>
   			</tr>
   			<tr>
-  				<td>�û���ţ�</td>
+  				<td>用户编号：</td>
   				<td><input type="text" name="custId" value="<%=discuss.getCustId()%>"></td>
   			</tr>
   			<tr>
-  				<td>�������ݣ�</td>
+  				<td>书评内容：</td>
   				<td><input type="text" name="context" value="<%=discuss.getContext()%>"></td>
   			</tr>
   			<tr>
-  				<td>����״̬��</td>
+  				<td>书评状态：</td>
   				<td><input type="text" name="states" value="<%=discuss.getStates()%>"></td>
   			</tr>
   			<tr>

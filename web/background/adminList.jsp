@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@page import="java.util.List"%>
 <%@page import="com.bookstore.bean.SysAdmin"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -10,22 +10,22 @@
 	int pageCount = Integer.parseInt(request.getAttribute("pageCount").toString());
 	%>
   <head>
-    <title>¹ÜÀíÔ±±í</title>
+    <title>ç®¡ç†å‘˜è¡¨</title>
     <style type="text/css">
     	@import '<%=request.getContextPath()%>/background/css/body.css';
     </style>
      <script type="text/javascript">
      	function isDelete(adminName) {
-    		return confirm("ÄúÒªÉ¾³ı " + adminName + " Âğ£¿");
+    		return confirm("æ‚¨è¦åˆ é™¤ " + adminName + " å—ï¼Ÿ");
     	}
     	
     	function gotoNowPage(nowPage) {
     		if(isNaN(nowPage)) {
-    			alert("ÇëÊäÈëÕûĞÍÊıÖµ£¡");
+    			alert("è¯·è¾“å…¥æ•´å‹æ•°å€¼ï¼");
     			return;
     		}
     		if(nowPage <= 0 || nowPage > ${requestScope.pageCount}) {
-    			alert("ÇëÊäÈëÒ³Âë·¶Î§ÄÚµÄÊıÖµ£¡");
+    			alert("è¯·è¾“å…¥é¡µç èŒƒå›´å†…çš„æ•°å€¼ï¼");
     			return;
     		}
     		location = "<%=request.getContextPath()%>/FindAllAdminServlet?nowPage="+nowPage;
@@ -35,14 +35,14 @@
   
   <body>
   	<table border="1">
-  		<caption>¹ÜÀíÔ±ÁĞ±í</caption>
+  		<caption>ç®¡ç†å‘˜åˆ—è¡¨</caption>
   		<tr>
-  			<th>¹ÜÀíÔ±±àºÅ</th>
-  			<th>¹ÜÀíÔ±ĞÕÃû</th>
-  			<th>¹ÜÀíÔ±ÃÜÂë</th>
-  			<th>¹ÜÀíÔ±¼¶±ğ</th>
-  			<th>ĞŞ¸Ä</th>
-  			<th>É¾³ı</th>
+  			<th>ç®¡ç†å‘˜ç¼–å·</th>
+  			<th>ç®¡ç†å‘˜å§“å</th>
+  			<th>ç®¡ç†å‘˜å¯†ç </th>
+  			<th>ç®¡ç†å‘˜çº§åˆ«</th>
+  			<th>ä¿®æ”¹</th>
+  			<th>åˆ é™¤</th>
   		</tr>
   		<%for(SysAdmin admin : adminList) { %>
 	    	<tr>
@@ -50,36 +50,36 @@
 	    		<td><%=admin.getAdminName() %></td>
 	    		<td><%=admin.getPwd() %></td>
 	    		<td><%=admin.getAdminType() %></td>
-	    		<td><a href = "<%=request.getContextPath() %>/FindByAdminIdServlet?id=<%=admin.getAdminId() %>">ĞŞ¸Ä</a></td>
+	    		<td><a href = "<%=request.getContextPath() %>/FindByAdminIdServlet?id=<%=admin.getAdminId() %>">ä¿®æ”¹</a></td>
 	    		<td><a href = "<%=request.getContextPath() %>/DeleteAdminServlet?id=<%=admin.getAdminId() %>"
-	    		onclick = "return isDelete('<%=admin.getAdminName() %>')">É¾³ı</a></td>
+	    		onclick = "return isDelete('<%=admin.getAdminName() %>')">åˆ é™¤</a></td>
 	    	</tr>
     	 <% }%>
   		 <tr>
-  		 	<td colspan = '6'><a href = "<%=request.getContextPath() %>/background/saveAdmin.jsp">ĞÂÔö</a>
-    		&nbsp;¹²<%=pageCount %>Ò³ &nbsp;
-    		µÚ<%=nowPage %>Ò³ &nbsp;
+  		 	<td colspan = '6'><a href = "<%=request.getContextPath() %>/background/saveAdmin.jsp">æ–°å¢</a>
+    		&nbsp;å…±<%=pageCount %>é¡µ &nbsp;
+    		ç¬¬<%=nowPage %>é¡µ &nbsp;
   		 	<%if(nowPage == 1) { %>
-    		µÚÒ»Ò³&nbsp;ÉÏÒ»Ò³&nbsp;
+    		ç¬¬ä¸€é¡µ&nbsp;ä¸Šä¸€é¡µ&nbsp;
     		<% } else {%>
-    		<a href = "<%=request.getContextPath() %>/FindAllAdminServlet?nowPage=1">µÚÒ»Ò³</a>&nbsp;
-    		<a href = "<%=request.getContextPath() %>/FindAllAdminServlet?nowPage=<%=nowPage - 1 %>">ÉÏÒ»Ò³</a>&nbsp;
+    		<a href = "<%=request.getContextPath() %>/FindAllAdminServlet?nowPage=1">ç¬¬ä¸€é¡µ</a>&nbsp;
+    		<a href = "<%=request.getContextPath() %>/FindAllAdminServlet?nowPage=<%=nowPage - 1 %>">ä¸Šä¸€é¡µ</a>&nbsp;
     		<%} %>
     		<%if(nowPage == pageCount) { %>
-    		ÏÂÒ»Ò³&nbsp;×îºóÒ³&nbsp;
+    		ä¸‹ä¸€é¡µ&nbsp;æœ€åé¡µ&nbsp;
     		<% } else {%>
-    		<a href = "<%=request.getContextPath() %>/FindAllAdminServlet?nowPage=<%=nowPage + 1 %>">ÏÂÒ»Ò³</a>&nbsp;
-    		<a href = "<%=request.getContextPath() %>/FindAllAdminServlet?nowPage=<%=pageCount %>">×îºóÒ³</a>&nbsp;
+    		<a href = "<%=request.getContextPath() %>/FindAllAdminServlet?nowPage=<%=nowPage + 1 %>">ä¸‹ä¸€é¡µ</a>&nbsp;
+    		<a href = "<%=request.getContextPath() %>/FindAllAdminServlet?nowPage=<%=pageCount %>">æœ€åé¡µ</a>&nbsp;
     		<%} %>
   		 	<select onchange="gotoNowPage(this.value)">
     		<%for(int i = 1; i <= pageCount; i++ ){ %>
     			<option value = "<%=i %>"
     			<%if(nowPage == i){ %>selected
     			<%} %>
-    			>µÚ<%=i%>Ò³</option>
+    			>ç¬¬<%=i%>é¡µ</option>
     		<% }%>
     		</select>&nbsp;
-  		 	µÚ<input size = '2' value = "<%=nowPage %>" onchange="gotoNowPage(this.value)">Ò³
+  		 	ç¬¬<input size = '2' value = "<%=nowPage %>" onchange="gotoNowPage(this.value)">é¡µ
   		 	</td>
   		 </tr>
   	</table>

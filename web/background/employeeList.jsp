@@ -1,23 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>Ô±¹¤ĞÅÏ¢ÁĞ±í</title>
+    <title>å‘˜å·¥ä¿¡æ¯åˆ—è¡¨</title>
     <style type="text/css">
     	@import '${pageContext.request.contextPath}/background/css/body.css'
     </style>
     <script type="text/javascript">
     	function isDelete(empName) {
-    		return confirm("ÄúÒªÉ¾³ı[" + empName + "]Âğ?");
+    		return confirm("æ‚¨è¦åˆ é™¤[" + empName + "]å—?");
     	}
     	function gotoNowPage(nowPage) {
     		if(isNaN(nowPage)) {
-    			alert("ÊäÈëµÄÒ³Âë±ØĞëÊÇÊı×Ö!!");
+    			alert("è¾“å…¥çš„é¡µç å¿…é¡»æ˜¯æ•°å­—!!");
     			return;
     		}
     		if(nowPage <= 0 || nowPage > ${requestScope.pageCount}) {
-    			alert("ÄúÊäÈëµÄÒ³Âë³¬³ö·¶Î§!!");
+    			alert("æ‚¨è¾“å…¥çš„é¡µç è¶…å‡ºèŒƒå›´!!");
     			return;
     		}
     		location = "${pageContext.request.contextPath}/FindAllEmployeeServlet?nowPage=" + nowPage;
@@ -27,15 +27,15 @@
   
   <body>
     	<table border="1">
-    		<caption>Ô±¹¤ĞÅÏ¢ÁĞ±í</caption>
+    		<caption>å‘˜å·¥ä¿¡æ¯åˆ—è¡¨</caption>
     		<tr>
-    			<th>Ô±¹¤±àºÅ</th>
-    			<th>Ô±¹¤ĞÕÃû</th>
-    			<th>Ô±¹¤ÉúÈÕ</th>
-    			<th>Ô±¹¤ĞÔ±ğ</th>
-    			<th>Ô±¹¤ÄêÁä</th>
-    			<th>ĞŞ¸Ä</th>
-    			<th>É¾³ı</th>
+    			<th>å‘˜å·¥ç¼–å·</th>
+    			<th>å‘˜å·¥å§“å</th>
+    			<th>å‘˜å·¥ç”Ÿæ—¥</th>
+    			<th>å‘˜å·¥æ€§åˆ«</th>
+    			<th>å‘˜å·¥å¹´é¾„</th>
+    			<th>ä¿®æ”¹</th>
+    			<th>åˆ é™¤</th>
     		</tr>
     		<c:forEach var="emp" items="${requestScope.emps}">
     			<tr onmouseover="this.bgColor='red'" onmouseout="this.bgColor='white'">
@@ -51,22 +51,22 @@
     		</c:forEach>
     		<tr>
     			<td colspan="7">
-    				<a href="${pageContext.request.contextPath}/background/saveEmp.jsp">ĞÂÔö</a>
-    				¹²${requestScope.pageCount}Ò³
-    				µÚ${requestScope.nowPage}Ò³
+    				<a href="${pageContext.request.contextPath}/background/saveEmp.jsp">æ–°å¢</a>
+    				å…±${requestScope.pageCount}é¡µ
+    				ç¬¬${requestScope.nowPage}é¡µ
     				<c:if test="${nowPage == 1}" var="result">
-    					µÚÒ»Ò³ ÉÏÒ»Ò³
+    					ç¬¬ä¸€é¡µ ä¸Šä¸€é¡µ
     				</c:if>
     				<c:if test="${!result}">
-    					<a href="${pageContext.request.contextPath}/FindAllEmployeeServlet?nowPage=1">µÚÒ»Ò³</a>
-    					<a href="${pageContext.request.contextPath}/FindAllEmployeeServlet?nowPage=${nowPage - 1}">ÉÏÒ»Ò³</a>
+    					<a href="${pageContext.request.contextPath}/FindAllEmployeeServlet?nowPage=1">ç¬¬ä¸€é¡µ</a>
+    					<a href="${pageContext.request.contextPath}/FindAllEmployeeServlet?nowPage=${nowPage - 1}">ä¸Šä¸€é¡µ</a>
     				</c:if>
     				<c:if test="${nowPage == pageCount}" var="result">
-    					ÏÂÒ»Ò³ ×îºóÒ³	
+    					ä¸‹ä¸€é¡µ æœ€åé¡µ	
     				</c:if>
     				<c:if test="${!result}">
-    					<a href="${pageContext.request.contextPath}/FindAllEmployeeServlet?nowPage=${nowPage + 1}">ÏÂÒ»Ò³</a>
-    					<a href="${pageContext.request.contextPath}/FindAllEmployeeServlet?nowPage=${pageCount}">×îºóÒ³</a>
+    					<a href="${pageContext.request.contextPath}/FindAllEmployeeServlet?nowPage=${nowPage + 1}">ä¸‹ä¸€é¡µ</a>
+    					<a href="${pageContext.request.contextPath}/FindAllEmployeeServlet?nowPage=${pageCount}">æœ€åé¡µ</a>
     				</c:if>
     				
     				<select onchange="gotoNowPage(this.value)">
@@ -74,12 +74,12 @@
     					varStatus="status">
     						<option value="${status.count}"
     						<c:if test="${status.count == nowPage}">selected</c:if>
-    						>µÚ${status.count}Ò³</option>
+    						>ç¬¬${status.count}é¡µ</option>
     					</c:forEach>    					
     				</select>	 
-					µÚ
+					ç¬¬
 					<input size="2" value="${nowPage}" onchange="gotoNowPage(this.value)">
-					Ò³	
+					é¡µ	
     			</td>
     		</tr>
     	</table>

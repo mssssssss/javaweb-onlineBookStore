@@ -1,11 +1,11 @@
-<%--管理员管理页面页面--%>
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%--绠＄悊鍛樼鐞嗛〉闈㈤〉闈�--%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <%@include file="checkLogin.jsp" %>
 <html>
 <head>
-<title>网上图书商城后台管理系统</title>
-  <%--以管理员身份登陆页面，由此进入管理员管理主页--%>
+<title>缃戜笂鍥句功鍟嗗煄鍚庡彴绠＄悊绯荤粺</title>
+  <%--浠ョ鐞嗗憳韬唤鐧婚檰椤甸潰锛岀敱姝よ繘鍏ョ鐞嗗憳绠＄悊涓婚〉--%>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 </head>
 <frameset rows="93,*" cols="*" frameborder="NO" border="0" framespacing="0">
