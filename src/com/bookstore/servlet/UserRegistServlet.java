@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Copyright (C), 2015-2019
@@ -32,6 +33,7 @@ import java.io.IOException;
 @WebServlet(name = "UserRegistServlet",urlPatterns = "/UserRegistServlet")
 public class UserRegistServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        PrintWriter out=response.getWriter();
         CustomerInfo info = new CustomerInfo();
         info.setCustName(request.getParameter("custName"));
         info.setPwd(request.getParameter("pwd"));
@@ -48,10 +50,12 @@ public class UserRegistServlet extends HttpServlet {
         CustomerDetailInfoDAOImpl customerDetailInfoDAO = new CustomerDetailInfoDAOImpl();
 
         if(customerInfoDAO.save(info)&&customerDetailInfoDAO.save(detailInfoinfo)&&request.getParameter("yzm").toString().equals(request.getSession().getAttribute("yzm").toString())){
-            response.sendRedirect("/qtLogin.jsp");
+            response.sendRedirect("qtLogin.jsp");
         }
         else {
-            System.out.println("注册失败");
+//            out.print("<script>alert('register failed!');</script>");
+            response.sendRedirect("UserRegister.jsp");
+
         }
 
 

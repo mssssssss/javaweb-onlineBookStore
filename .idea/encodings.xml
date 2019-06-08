@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/BookDiscuss.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/BookInfo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/bookstore/bean/BookType.java" charset="GBK" />
@@ -111,11 +111,9 @@
     <file url="file://$PROJECT_DIR$/web/images/03.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/images/04.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/images/05.jpg" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/web/images/05.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/images/1.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/images/2.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/images/3.jpg" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/web/images/car.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/images/car.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/imgsd" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/imgsd/aiguoni.jpg" charset="UTF-8" />

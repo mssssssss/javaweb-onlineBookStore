@@ -151,8 +151,8 @@
 	<a href="http://product.dangdang.com/23690437.html#ddclick?act=click&pos=23690437_0_1_p&cat=01.38.07.00.00.00&key=&qinfo=&pinfo=7023_1_60&minfo=&ninfo=&custid=&permid=20160414103850170642707113084209851&ref=&rcount=&type=&t=1460601593000&searchapi_version=test_new">公司简介</a><span>|</span><a href="#">免责条款</a><span>|</span><a href="#">隐私保护</a><span>|</span><a href="#">咨询热点</a><span>|</span><a href="#">合作招募</a><span>|</span><a href="#">配送方式</a><span>|</span><a href="#">联系我们</a>
     </div>
     <div class="footer2">
-    @ 2011-2012 旭邦医疗商城 版权所有，并保留所有权利。<br />
-    电话:029-62966051 87811277 传真：029-62966051 陕ICP备1109231号 技术支持：<a href="#">徽韵网络</a>
+        Copyright (C) 云起点 2009-2019, All Rights Reserve<br />
+    电话:029-62966051 87811277 传真：029-62966051 陕ICP备1109231号
     </div>
 </div>
 </body>

@@ -103,7 +103,7 @@
 	  <form action="<%=request.getContextPath()%>/QtLoginServlet" method="post">
 		<div align="center">
 			<div align="center">
-				<div ><img src="images/couponregister/i_320.jpg" align="center"> </div>
+				<div ><img src="images/i_320.jpg" align="center"> </div>
 				<div   style="margin:0; padding:10px 40px 0 43px; width:262px;  border-left:1px solid #BBE3FF; border-right:1px solid #BBE3FF;">
 				  <table align="center" width="262" border="0" cellspacing="0" cellpadding="0">
                     <tr>

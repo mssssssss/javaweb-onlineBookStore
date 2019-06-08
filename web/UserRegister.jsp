@@ -43,7 +43,7 @@
         </tr>
         <tr>
             <td align="right">性别：</td>
-            <td><input type="text" name="sex" class="form-control"></td>
+            <td><input type="text" name="sex" class="form-control">（0代表男，1代表女）</td>
         </tr>
         <tr>
             <td align="right">年龄：</td>

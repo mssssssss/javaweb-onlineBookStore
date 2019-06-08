@@ -354,7 +354,7 @@
             }, 70);
             $body.appendChild($elem);
         };
-    };
+    }
 </script>
 </body>
 </html>
