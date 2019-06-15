@@ -34,7 +34,7 @@ public class InitIndexServlet extends HttpServlet {
 		 */
 		INewsDAO newsDAO = new NewsDAOImpl();
 		IBookInfoDAO infoDAO = new BookInfoDAOImpl();
-		//1>.获取新闻列表 top10
+		//1>.获取新闻列表 top12
 		List<News> news = newsDAO.findTopNine(12);
 		//2>.获取最新商品 根据上架日期的降序排列，再取top5
 		List<BookInfo> sjbooks = infoDAO.findBySjdate(5);
