@@ -3,9 +3,7 @@
 <%@page import="java.util.List"%>
 <%@page import="com.bookstore.bean.BookInfo"%>
 <%@page import="com.bookstore.bean.News"%>
-<%@page import="com.bookstore.bean.BookType"%>
-<%@page import="java.util.Map"%>
-<%@page import="java.util.Set"%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
@@ -233,6 +231,7 @@
 </div>  
 <div class="clear"><img src="#" width="1" height="1"/></div>
 <!-- footer -->
+<%--下面的看看就好--%>
 <div class="footer">
 	<ul class="lbox">
     	<li style="alignment:center; background: none; font-size: 14px; font-weight: bolder;">购物指南</li>
@@ -303,13 +302,13 @@
                     $elem.innerText = "OωO";
                     break;
                 case 20:
-                    $elem.innerText = "(??? ? ???)";
+                    $elem.innerText = "(•́ ∀ •̀";
                     break;
                 case 30:
-                    $elem.innerText = "(??? ? ???)";
+                    $elem.innerText = "(•́ ₃ •̀";
                     break;
                 case 40:
-                    $elem.innerText = "(???_???)";
+                    $elem.innerText = "(•̀_•)";
                     break;
                 case 50:
                     $elem.innerText = "（￣へ￣）";
@@ -318,13 +317,13 @@
                     $elem.innerText = "(╯°口°)╯(┴—┴";
                     break;
                 case 70:
-                    $elem.innerText = "?( ??皿?? )?";
+                    $elem.innerText = "( ᵒ̌皿ᵒ̌ )";
                     break;
                 case 80:
-                    $elem.innerText = "╮(?>口<?)╭";
+                    $elem.innerText = "╮(｡>口<｡)╭";
                     break;
                 case 90:
-                    $elem.innerText = "( ? ??皿??)?????";
+                    $elem.innerText = "╮(?>口<?)╭";
                     break;
                 case 100:
                 case 101:
@@ -332,11 +331,10 @@
                 case 103:
                 case 104:
                 case 105:
-                    $elem.innerText = "(?°?д°?)";
+                    $elem.innerText = " (ꐦ°᷄д°᷅)";
                     break;
                 default:
-                    // $elem.innerText = "?";
-                    $elem.innerText = "OωO";
+                    $elem.innerText = "❤";
                     break;
             }
             $elem.style.fontSize = Math.random() * 10 + 8 + "px";

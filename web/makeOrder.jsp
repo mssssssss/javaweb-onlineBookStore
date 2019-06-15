@@ -35,9 +35,7 @@
 	<div class="top1_2">
 		<div class="top1_2_l">
             <ul class="yudingCon">
-                <%--<li>书名:<input type="text" name="" class="kuang" />  </li>--%>
-            	<%--<li>作者:<input type="text" name="" class="kuang" />  </li>--%>
-            	<%--<li class="ribtn"><input type="image" src="images/btn.gif" class="btn"/></li>--%>
+
 		</ul>
         </div>
 		<div class="top1_2_r">
@@ -117,63 +115,10 @@
 				  </TBODY></TABLE></div></div>
 				</div></div>
 			<div id=part_payTypeAndShipType>
-			<%--<div class=o_show>
-			<h1>支付及配送方式&nbsp;<A id=linkPayTypeShipType 
-			onclick=showForm_payTypeAndShipType(this); href="javascript:void(0)">[修改]</A></h1>
-			<div id=updateInfo_payType></div>
-			<div class=middle>
-			<TABLE style="WIDTh: 100%">
-			  <TBODY>
-			  <TR>
-				<TD style="TEXT-ALIGN: right; WIDTh: 80px">支付方式：</TD>
-				<TD>在线支付</TD></TR>
-			  <TR>
-				<TD style="TEXT-ALIGN: right">配送方式：</TD>
-				<TD>快递运输</TD></TR>
-			  <TR>
-				<TD style="TEXT-ALIGN: right">运　　费：</TD>
-				<TD>0.00元<SPAN style="COLOR: red">(免运费)</SPAN></TD></TR>
-			  <TR style="DISPLAY: none">
-				<TD style="TEXT-ALIGN: right">送货日期：</TD>
-				<TD style="COLOR: red">{CodTime}</TD></TR>
-			  <TR style="DISPLAY: none">
-				<TD style="TEXT-ALIGN: right">自提时间：</TD>
-				<TD style="COLOR: red">{PickTime}</TD></TR></TBODY></TABLE></div>
-			<div class=footsty></div></div></div><!--支付方式及配送方式结束-->--%>
-			<!--发票信息开始-->
+
 <div id=part_invoice>
-<%--<div class=o_show>
-<h1>发票信息&nbsp;<A onclick=showForm_invoice(this) href="javascript:void(0)">[修改]</A></h1>
-<div class=middle>
-<TABLE style="WIDTh: 100%; DISPLAY: none">
-  <TBODY>
-  <TR>
-    <TD 
-  style="TEXT-ALIGN: left; PADDING-LEFT: 22px">开取类型：&nbsp;默认开取</TD></TR></TBODY></TABLE>
-<TABLE style="WIDTh: 100%">
-  <TBODY>
-  <TR>
-    <TD style="TEXT-ALIGN: right; WIDTh: 82px">发票类型：</TD>
-    <TD>普通发票</TD></TR>
-  <TR>
-    <TD style="TEXT-ALIGN: right">发票抬头：</TD>
-    <TD>个人 </TD></TR>
-  <TR>
-    <TD style="TEXT-ALIGN: right">发票内容：</TD>
-    <TD>
-      <div><SPAN style="DISPLAY: none">非图书商品：</SPAN><SPAN>明细</SPAN></div>
-      <div><SPAN style="DISPLAY: none">图书商品：</SPAN><SPAN 
-      style="DISPLAY: none">不开发票</SPAN></div></TD></TR></TBODY></TABLE>
-<TABLE style="WIDTh: 100%; DISPLAY: none">
-  <TBODY>
-  <TR>
-    <TD 
-style="TEXT-ALIGN: left; PADDING-LEFT: 22px">不开发票</TD></TR></TBODY></TABLE></div>
-<div class=footsty></div></div></div><!--发票信息结束--><!--Cart信息开始-->--%>
-<div id=part_cart></div><!--Cart信息开始--><!--有货先发开始-->
-<%--<div style="PADDING-BOTTOM: 8px; PADDING-LEFT: 30px; PADDING-RIGhT: 0px; COLOR: red; PADDING-TOP: 8px" id=part_FirstInstockShip>
-	<LABEL for=chk_FirstInstockShip>先发有货商品（如果订单部分商品缺货，优先配送有货商品）</LABEL> 
-	</div>--%>
+
+<div id=part_cart></div>
 </div>
 	    <dl id="myCartTitle">
         	<dt>确认挑选的商品</dt>
@@ -220,7 +165,6 @@ style="TEXT-ALIGN: left; PADDING-LEFT: 22px">不开发票</TD></TR></TBODY></TAB
                               优惠：${sessionScope.gwc.yhPrices}元
             = 商品总计(不含运费)：<span class="fred">${sessionScope.gwc.hyPrices}元</span>  获得：0 积分点</td>
 		  </tr>
-		  
 		  <tr><td colspan="8">
 		    <div class="left">
 		       <a class="btn_clear_cart" href="${pageContext.request.contextPath}/InitIndexServlet"><img src="images/jxgw.png"></a>
@@ -234,7 +178,7 @@ style="TEXT-ALIGN: left; PADDING-LEFT: 22px">不开发票</TD></TR></TBODY></TAB
 		</div>
 </div>
 <div class="footer2" style="margin-left:130px">
-版权所有：www.xubangyiliao.com<br/>
+版权所有：ilovemss.blog.csdn.net<br/>
 电话:029-62966051 87811277 传真：029-62966051 陕ICP备1109231号
 </div>
 </form>

@@ -15,8 +15,6 @@
     </style>
 </head>
 <body style="background-color: #add8e6">
-<%--<script language="JavaScript" src="js/clickFunction.js"></script>--%>
-
 <p>&nbsp;</p>
 <p align="center" style=" font-size: 25px;">新增用户基本信息</p>
 <form action="UserRegistServlet" method="post" >
