@@ -12,79 +12,6 @@
 <link href="css/front/css.css" rel="stylesheet" type="text/css" />
 
 <script language="javascript" src="js/util.js"></script>
-<script language="javascript" type="text/javascript">
-	function trim(str){
-		return str.replace(/(^\s*)|(\s*$)/g, "");
-	}
-
-	var valiateUsrFlag=true;
-	var valiatePwdFlag=true;
-	function checkFormSuccess(){
-	if(valiateUsrFlag&&valiatePwdFlag){
-		var errorMsg = document.getElementById("errorMsg");
-		errorMsg.innerHTML='';
-        errorMsg.className='color_1';
-	   }
-	}
-
-	function checkUserName(){
-		var result=true;
-		var errorMsg = document.getElementById("errorMsg");
-		var username = document.getElementById("username");
-		if(trim(username.value).length==0){
-			errorMsg.innerHTML='用户名为必填项，请输入您的用户名';
-	        errorMsg.className='n_zc_red';
-			result=false;
-			valiateUsrFlag=false;
-		}else{
-			valiateUsrFlag=true;
-		}
-		checkFormSuccess();
-		return result;
-	}
-
-	function checkPassword(){
-		var result=true;
-		var errorMsg = document.getElementById("errorMsg");
-		var password = document.getElementById("password");
-		if(trim(password.value).length==0&&valiateUsrFlag){//如果用户名或密码或验证码三者中有两个或者两个以上的出现了错误的情况则提示信息按照用户名、密码、验证码的优先级显示相应的提示文字
-			errorMsg.innerHTML='密码为必填项，请输入您的密码';
-	        errorMsg.className='n_zc_red';
-			result=false;
-			valiatePwdFlag=false;
-		}else if(trim(password.value).length < 3&&valiateUsrFlag){
-			errorMsg.innerHTML='您输入的密码有误，请重新输入';
-	        errorMsg.className='n_zc_red';
-			result=false;
-			valiatePwdFlag=false;
-		}else if(trim(password.value).length > 16&&valiateUsrFlag){
-			errorMsg.innerHTML='您输入的密码有误，请重新输入';
-	        errorMsg.className='n_zc_red';
-			result=false;
-			valiatePwdFlag=false;
-		}else{
-			valiatePwdFlag=true;
-		}
-		checkFormSuccess();
-		return result;
-	}
-
-	//校验全部字段
-    function checkAll(){
-    	var result = true;
-    	if(!checkUserName())
-    		result = false;
-   		if(!checkPassword())
-    		result = false;
-    	return result;
-    }
-	//提交
-	function check(form){
-		if(checkAll()){
-			form.submit();
-		}
-    }
-</script>
     <style>
         a:hover{color: red;}
     </style>
@@ -109,26 +36,13 @@
                     <tr>
                       <td width="120" height="40" style="font-size: 15px" >用户名:</td>
                       <td height="35" colspan="3">
-                      <input type="text" name="username" id="username"  onblur="checkUserName()" tabindex="1" class="input_35" />
-                      <script language="javascript" type="text/javascript">
-			              var msg='';
-			              if(""!=msg){
-				              document.getElementById("errorMsg").innerHTML=msg;
-				              document.getElementById("errorMsg").className='n_zc_red';
-			              }
-		              </script>
+                      <input type="text" name="username" id="username"  tabindex="1" class="input_35" />
                       </td>
                     </tr>
                     <tr>
                       <td height="40" style="font-size: 15px">密&nbsp;&nbsp;码：</td>
-                      <td height="35" colspan="3"><input type="password" name="password" id="password"  onblur="checkPassword()" tabindex="2" class="input_35"  />
-                      <script language="javascript" type="text/javascript">
-			              msg='';
-			              if(""!=msg){
-				              document.getElementById("errorMsg").innerHTML=msg;
-				              document.getElementById("errorMsg").className='n_zc_red';
-			              }
-		              </script>
+                      <td height="35" colspan="3"><input type="password" name="password" id="password"  tabindex="2" class="input_35"  />
+
                       </td>
                     </tr>
                     <tr>

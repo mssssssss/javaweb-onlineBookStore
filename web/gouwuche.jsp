@@ -22,7 +22,7 @@
   	}
   	var a = parseInt(num);
   	if(a <= 0){
-  		alert("输入的图示数量必须大于等于1！");
+  		alert("输入的图书数量必须大于等于1！");
   		return;
   	}
   	location = "<%=request.getContextPath() %>/UpdateGwcItemNumServlet?id="+ bookId +"&num="+num;

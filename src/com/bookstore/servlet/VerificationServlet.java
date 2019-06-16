@@ -31,9 +31,6 @@ import java.util.Random;
 @WebServlet(name = "VerificationServlet",urlPatterns = "/VerificationServlet")
 public class VerificationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
         // 设置浏览器不缓存
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Cache-Control", "no-cache");
